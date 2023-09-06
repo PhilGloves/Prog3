@@ -20,3 +20,6 @@ Provo ad aprire e se funziona mando qualche mail in giro.
 
 
 --Dovrei cambiare anche il conf.json con ip e porte diverse?
+
+---Tolgo qualche metodo che non ha utilizzato Bad e non è necessario per il progetto tipo:
+-metodi per la registrazione che non ha utilizzato in un po' di classi (da fare)
