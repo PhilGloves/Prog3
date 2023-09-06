@@ -1,0 +1,22 @@
+--CAMBIO SOLO I .JAVA
+
+Parto con la cartella prog_client.
+Client.java inizio a cambiare replay in reply e in tutte le altre classi nella stessa cartella (ControllerMain, ControllerStart etc.)
+
+-Cartella prog_server, cambiato tutti i Replay con Reply e isReaded (o Readed) in isRead (o Read). Sended in sent e altry typo
+
+-Cartella progetto_server stesse cose
+
+-Cartella progGrafica uguale 
+
+--IN TEORIA SE CANCELLO LE CARTELLE "progetto_server" e "progGrafica" dovrebbe andare comunque, provo
+OK FUNZIONA (le ho tolte)
+
+
+--CAMBIO TUTTI I DATI IN PROG_SERVER>DATA
+Cambio gli utenti nel file users.json
+Cancello tutte le cartelle degli utenti presenti (che contengono ognuno i file inbox e sent) e le rimpiazzo con i nuovi utenti creati.
+Provo ad aprire e se funziona mando qualche mail in giro.
+
+
+--Dovrei cambiare anche il conf.json con ip e porte diverse?

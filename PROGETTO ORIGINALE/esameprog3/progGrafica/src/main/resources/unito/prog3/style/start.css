@@ -1,0 +1,53 @@
+/* Login */
+
+.login-view {
+    -fx-background-color:
+            linear-gradient(to bottom right,
+            rgb(250, 187, 109) 0%,
+            rgb(170, 207, 227) 100%);
+}
+.login-card{
+    -fx-background-radius: 10%;
+    -fx-background-size: 100;
+    -fx-background-color:
+            linear-gradient(to bottom right,
+            rgb(45, 45, 45) 0%,
+            rgb(84, 84, 84) 100%);
+    -fx-effect: dropshadow(
+            two-pass-box,
+            rgba(0,0,0,0.8), 50, 0, 0, 0);
+}
+.login-title {
+    -fx-font-famil: Calibri;
+    -fx-text-fill:
+            linear-gradient(to right bottom,
+            rgb(149, 198, 255) 0%,
+                rgb(253, 188, 98) 100%);
+    -fx-font-weight: bold;
+}
+.login-error {
+    -fx-font-family: Arial;
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+}
+
+.login-input{
+    -fx-prompt-text-fill: rgba(118, 118, 123, 0.6);
+    -fx-font-size: 1.5em;
+    -fx-background-color: #FFFFFF;
+    -fx-text-box-border: hidden;
+    -fx-background-radius: 5 10 10 5;
+}
+
+.login-btn {
+    -fx-background-color: #5ec2ff;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+}
+.login-btn:hover {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #4fc1ff;
+    -fx-border-radius: 10;
+    -fx-border-color: #4fc1ff;
+    -fx-font-size: 17px;
+}
