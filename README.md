@@ -60,7 +60,7 @@ L'interfaccia utente deve essere:
 - Il voto finale si ottiene come media del voto della prova orale e della discussione di laboratorio (i due voti hanno ugual peso nella media).
 - Il voto finale deve essere registrato entro fine settembre 2022, data oltre la quale non è possibile mantenere i voti parziali. Leggere il regolamento d'esame sulla pagina web dell'insegnamento per ulteriori dettagli.
 
-## Modifiche
+# Modifiche
 
 ### Cambiamenti nei File .java
 
