@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="it" xml:lang="it">
+<head>
+    <title>ProgrIII-2022/23: Progetto di laboratorio di Programmazione III</title>
+    <link rel="shortcut icon" href="https://informatica.i-learn.unito.it/theme/image.php/lambda/theme/1692604098/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, ProgrIII-2022/23: Progetto di laboratorio di Programmazione III" />
+<link rel="stylesheet" type="text/css" href="https://informatica.i-learn.unito.it/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://informatica.i-learn.unito.it/theme/styles.php/lambda/1692604098_1692604169/all" />
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/informatica.i-learn.unito.it","sesskey":"uoLK1vDyh8","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1692604098","slasharguments":1,"theme":"lambda","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1692604098","admin":"admin","svgicons":true,"usertimezone":"Europa\/Roma","contextid":350290,"langrev":1693880921,"templaterev":"1692604098"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/informatica.i-learn.unito.it\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/informatica.i-learn.unito.it\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/informatica.i-learn.unito.it\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/informatica.i-learn.unito.it\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/informatica.i-learn.unito.it\/theme\/yui_combo.php?m\/1692604098\/","combine":true,"comboBase":"https:\/\/informatica.i-learn.unito.it\/theme\/yui_combo.php?","ext":false,"root":"m\/1692604098\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_bigbluebuttonbn-broker":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_bigbluebuttonbn-imports":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-modform":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-recordings":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_bigbluebuttonbn-rooms":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_scheduler-delselected":{"requires":["base","node","event"]},"moodle-mod_scheduler-saveseen":{"requires":["base","node","event"]},"moodle-mod_scheduler-studentlist":{"requires":["base","node","event","io"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-format_grid-gridkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_editrolesbycap-capabilityformfield":{"requires":["base","dom","event","cookie"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-local_kaltura-lticontainer":{"requires":["base","node"]},"moodle-local_kaltura-ltipanel":{"requires":["base","node","panel","node-event-simulate"]},"moodle-local_kaltura-ltiservice":{"requires":["base","node","node-event-simulate"]},"moodle-local_kaltura-ltitinymcepanel":{"requires":["base","node","panel","node-event-simulate"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_kalturamedia-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_smiles":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/informatica.i-learn.unito.it\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/informatica.i-learn.unito.it\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1692604098\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/informatica.i-learn.unito.it\/lib\/javascript.php\/1692604098\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/informatica.i-learn.unito.it\/lib\/javascript.php\/1692604098\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google web fonts -->
+    </head>
+
+<body  id="page-mod-page-view" class="format-weeks  path-mod path-mod-page chrome dir-ltr lang-it yui-skin-sam yui3-skin-sam informatica-i-learn-unito-it pagelayout-incourse course-2458 context-350290 cmid-207582 category-408 columns3 has-region-side-pre has-region-side-post used-region-side-pre empty-region-side-post blockstyle-02">
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Vai al contenuto principale</a>
+</div><script src="https://informatica.i-learn.unito.it/lib/javascript.php/1692604098/lib/babel-polyfill/polyfill.min.js"></script>
+<script src="https://informatica.i-learn.unito.it/lib/javascript.php/1692604098/lib/polyfills/polyfill.js"></script>
+<script src="https://informatica.i-learn.unito.it/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://informatica.i-learn.unito.it/theme/jquery.php/core/jquery-3.5.1.min.js"></script>
+<script src="https://informatica.i-learn.unito.it/lib/javascript.php/1692604098/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+
+<div id="wrapper">
+
+
+
+<header id="page-header" class="clearfix">              	
+		<div class="container-fluid">    
+	<div class="row-fluid">
+
+				<div class="span6">
+			<div class="logo-header">
+				<a class="logo" href="https://informatica.i-learn.unito.it" title="Home">
+					<img src="//informatica.i-learn.unito.it/pluginfile.php/1/theme_lambda/logo/1692604098/NUovo_logo_2022.png" class="img-responsive" alt="logo" />				</a>
+			</div>
+		</div>
+		      	
+
+		<div class="span6 login-header">
+			<div class="profileblock">
+
+				<div id="loggedin-user"><div class="popover-region collapsed popover-region-notifications"
+    id="nav-notification-popover-container" data-userid="22914"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link icon-no-margin"
+        data-region="popover-region-toggle"
+        role="button"
+        aria-controls="popover-region-container-64f8700e5a15664f8700e5239e42"
+        aria-haspopup="true"
+        aria-label="Visualizza la finestra delle notifiche senza notifiche nuove"
+        tabindex="0">
+                <i class="icon fa fa-bell fa-fw "  title="Visualizza/nascondi menu notifiche" role="img" aria-label="Visualizza/nascondi menu notifiche"></i>
+        <div class="count-container hidden" data-region="count-container"
+        aria-label="Notifiche non lette: 0">0</div>
+
+    </div>
+    <div 
+        id="popover-region-container-64f8700e5a15664f8700e5239e42"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Finestra di notifica"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Notifiche</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <a class="mark-all-read-button"
+           href="#"
+           title="Segna tutti come letti"
+           data-action="mark-all-read"
+           role="button"
+           aria-label="Segna tutti come letti">
+            <span class="normal-icon"><i class="icon fa fa-check fa-fw " aria-hidden="true"  ></i></span>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+        </a>
+            <a href="https://informatica.i-learn.unito.it/message/notificationpreferences.php"
+               title="Preferenze notifiche"
+               aria-label="Preferenze notifiche">
+                <i class="icon fa fa-cog fa-fw " aria-hidden="true"  ></i></a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="all-notifications"
+            data-region="all-notifications"
+            role="log"
+            aria-busy="false"
+            aria-atomic="false"
+            aria-relevant="additions"></div>
+        <div class="empty-message" tabindex="0" data-region="empty-message">Non hai notifiche</div>
+
+            </div>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://informatica.i-learn.unito.it/message/output/popup/notifications.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">Visualizza tutto</div>
+                    </div>
+                </a>
+    </div>
+</div><div class="popover-region collapsed" data-region="popover-region-messages">
+    <a id="message-drawer-toggle-64f8700e5a99564f8700e5239e43" class="nav-link d-inline-block popover-region-toggle position-relative icon-no-margin" href="#"
+            role="button">
+        <i class="icon fa fa-comment fa-fw "  title="Visualizza/nascondi menu messaggi" role="img" aria-label="Visualizza/nascondi menu messaggi"></i>
+        <div class="count-container hidden" data-region="count-container"
+        aria-label="Conversazioni non lette: 0">0</div>
+    </a>
+    <span class="sr-only sr-only-focusable" data-region="jumpto" tabindex="-1"></span></div><div class="usermenu"><div class="action-menu moodle-actionmenu nowrap-items d-inline" id="action-menu-0" data-enhance="moodle-core-actionmenu">
+
+        <div class="menubar d-flex " id="action-menu-0-menubar">
+
+            
+
+
+                <div class="action-menu-trigger">
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" tabindex="0" class="d-inline-block  dropdown-toggle icon-no-margin" id="action-menu-toggle-0" aria-label="Menu utente" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="action-menu-0-menu">
+                            
+                            <span class="userbutton"><span class="usertext mr-1">Guanti Filippo</span><span class="avatars"><span class="avatar current"><img src="https://informatica.i-learn.unito.it/pluginfile.php/167924/user/icon/lambda/f2?rev=1592146" class="userpicture" width="35" height="35" alt="" /></span></span></span>
+                                
+                            <div class="caret"></div>
+                        </a>
+                            <div class="dropdown-menu dropdown-menu-right menu  align-tr-br" id="action-menu-0-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-0" role="menu" data-align="tr-br">
+                                        <a href="https://informatica.i-learn.unito.it/my/" class="dropdown-item menu-action" role="menuitem" data-title="mymoodle,admin" tabindex="-1" aria-labelledby="actionmenuaction-1">
+                                                <i class="icon fa fa-tachometer fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-1">
+                                                Dashboard
+                                            </span>
+                                        </a>
+                                        <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
+                                        <a href="https://informatica.i-learn.unito.it/user/profile.php?id=22914" class="dropdown-item menu-action" role="menuitem" data-title="profile,moodle" tabindex="-1" aria-labelledby="actionmenuaction-2">
+                                                <i class="icon fa fa-user fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-2">
+                                                Profilo
+                                            </span>
+                                        </a>
+                                        <a href="https://informatica.i-learn.unito.it/grade/report/overview/index.php" class="dropdown-item menu-action" role="menuitem" data-title="grades,grades" tabindex="-1" aria-labelledby="actionmenuaction-3">
+                                                <i class="icon fa fa-table fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-3">
+                                                Valutazioni
+                                            </span>
+                                        </a>
+                                        <a href="https://informatica.i-learn.unito.it/message/index.php" class="dropdown-item menu-action" role="menuitem" data-title="messages,message" tabindex="-1" aria-labelledby="actionmenuaction-4">
+                                                <i class="icon fa fa-comment fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-4">
+                                                Messaggi
+                                            </span>
+                                        </a>
+                                        <a href="https://informatica.i-learn.unito.it/user/preferences.php" class="dropdown-item menu-action" role="menuitem" data-title="preferences,moodle" tabindex="-1" aria-labelledby="actionmenuaction-5">
+                                                <i class="icon fa fa-wrench fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-5">
+                                                Preferenze
+                                            </span>
+                                        </a>
+                                        <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
+                                        <a href="https://informatica.i-learn.unito.it/login/logout.php?sesskey=uoLK1vDyh8" class="dropdown-item menu-action" role="menuitem" data-title="logout,moodle" tabindex="-1" aria-labelledby="actionmenuaction-6">
+                                                <i class="icon fa fa-sign-out fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-6">
+                                                Esci
+                                            </span>
+                                        </a>
+                            </div>
+                    </div>
+                </div>
+
+        </div>
+
+</div></div><a href="https://informatica.i-learn.unito.it/user/view.php?id=22914&amp;course=2458" class="d-inline-block aabtn"><img src="https://informatica.i-learn.unito.it/pluginfile.php/167924/user/icon/lambda/f1?rev=1592146" class="welcome_userpicture" width="80" height="80" alt="" /></a></div>
+						</div>
+					</div>
+
+				</div>
+			</div>               
+</header>
+<header class="navbar">
+    <nav class="navbar-inner">
+        <div class="lambda-custom-menu container-fluid">
+            <a class="brand" href="https://informatica.i-learn.unito.it/?redirect=0"><i class="fa-solid fa-house-chimney"></i></a>            <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="nav-collapse collapse">
+                <ul class="nav"><li class="dropdown"><a href="#cm_submenu_1" class="dropdown-toggle" data-toggle="dropdown">Moodle community<div class="caret"></div></a><ul class="dropdown-menu"><li><a href="http://docs.moodle.org/en/Philosophy">Moodle Philosophy</a></li><li><a href="http://moodle.org">Moodle Main Web Site</a></li><li><a title="Moodle Docs" href="http://docs.moodle.org">Moodle Docs</a></li><li><a href="http://www.aium.it">Associazione Italiana Utenti Moodle</a></li></ul><li class="dropdown"><a href="#cm_submenu_2" class="dropdown-toggle" data-toggle="dropdown">UniTO<div class="caret"></div></a><ul class="dropdown-menu"><li><a href="http://www.unito.it">Portale di Ateneo</a></li><li><a href="http://laurea.educ.di.unito.it">Laurea in Informatica homepage</a></li><li><a href="http://magistrale.educ.di.unito.it">Laurea Magistrale in Informatica homepage</a></li><li><a href="http://www.di.unito.it">Dipartimento di Informatica</a></li></ul><li class="dropdown"><a href="#cm_submenu_3" class="dropdown-toggle" data-toggle="dropdown">HelpDesk<div class="caret"></div></a><ul class="dropdown-menu"><li><a href="https://informatica.i-learn.unito.it/helpdesk/index.php?t=tcre">Crea Ticket</a></li></ul><li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown" title="I miei corsi">I miei corsi<div class="caret"></div></a><ul class="dropdown-menu"><li><a title="Laboratorio di Algoritmi e Strutture Dati 22-23" href="https://informatica.i-learn.unito.it/course/view.php?id=2598">LabASD 22-23</a></li><li><a title="Laboratorio di Sistemi Operativi - Corso A - Turno T1" href="https://informatica.i-learn.unito.it/course/view.php?id=2574">SOA_lab_T1_22-23</a></li><li><a title="Laboratorio di Sistemi Operativi - Corso B - Turno T4" href="https://informatica.i-learn.unito.it/course/view.php?id=2572">SOB_Lab_T4_22-23</a></li><li><a title="Sistemi Operativi A (teoria) a. a. 2022-2023" href="https://informatica.i-learn.unito.it/course/view.php?id=2556">SOA-22-23</a></li><li><a title="Laboratorio di Sistemi Operativi: corso A (turno T2), corso B (turno T3). a.a 2022/23" href="https://informatica.i-learn.unito.it/course/view.php?id=2548">2022_SO_Lab_T2_T3</a></li><li><a title="Sistemi Operativi B, aa 2022-2023" href="https://informatica.i-learn.unito.it/course/view.php?id=2536">SOB2223</a></li><li><a title="Algoritmi e Strutture Dati, Corso B a.a. 2022/23" href="https://informatica.i-learn.unito.it/course/view.php?id=2514">ASD B 22/23</a></li><li><a title="Sviluppo delle Applicazioni Software - Teoria A - 2022/23 (cognomi A-K)" href="https://informatica.i-learn.unito.it/course/view.php?id=2618">SAS-TeoA-2223 (cognomi A-K)</a></li><li><a title="Sistemi Informativi a.a. 2022 - 2023" href="https://informatica.i-learn.unito.it/course/view.php?id=2498">Sist-Inf-2022-2023</a></li><li><a title="Programmazione III, Istituzioni di programmazione in rete" href="https://informatica.i-learn.unito.it/course/view.php?id=2458">ProgrIII-2022/23</a></li><li><a title="Altro..." href="https://informatica.i-learn.unito.it/my/index.php">Altro...</a></li></ul><li class="dropdown langmenu"><a href="" class="dropdown-toggle" data-toggle="dropdown" title="Lingua">Italiano ‎(it)‎<div class="caret"></div></a><ul class="dropdown-menu"><li><a title="English ‎(en)‎" href="https://informatica.i-learn.unito.it/mod/page/view.php?id=207582&amp;lang=en">English ‎(en)‎</a></li><li><a title="Italiano ‎(it)‎" href="https://informatica.i-learn.unito.it/mod/page/view.php?id=207582&amp;lang=it">Italiano ‎(it)‎</a></li></ul></ul>                <ul class="nav pull-right">
+                    <li></li>
+                </ul>
+                
+                                
+                                <form id="search" action="https://informatica.i-learn.unito.it/course/search.php" >
+                	<label for="coursesearchbox" class="lambda-sr-only">Cerca corsi</label>						
+					<input id="coursesearchbox" type="text" onFocus="if(this.value =='Cerca corsi' ) this.value=''" onBlur="if(this.value=='') this.value='Cerca corsi'" value="Cerca corsi" name="search" >
+					<button type="submit"><span class="lambda-sr-only">Invia</span></button>						
+				</form>
+                                
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<!-- Start Main Regions -->
+<div id="page" class="container-fluid">
+
+    <div id ="page-header-nav" class="clearfix">
+    	        <div id="page-navbar" class="clearfix">
+            <div class="breadcrumb-nav"><span class="accesshide" id="navbar-label">Percorso della pagina</span><nav aria-labelledby="navbar-label"><ul class="breadcrumb"><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="https://informatica.i-learn.unito.it/"><span itemprop="title">Home</span></a></span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25BA;</span> </span></li><li><span tabindex="0">I miei corsi</span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25BA;</span> </span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="https://informatica.i-learn.unito.it/course/index.php?categoryid=400"><span itemprop="title">Anno Accademico 22/23</span></a></span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25BA;</span> </span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="https://informatica.i-learn.unito.it/course/index.php?categoryid=406"><span itemprop="title">Terzo anno Laurea DM270</span></a></span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25BA;</span> </span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="https://informatica.i-learn.unito.it/course/index.php?categoryid=408"><span itemprop="title">Informazione e Conoscenza</span></a></span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25BA;</span> </span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" title="Programmazione III, Istituzioni di programmazione in rete" href="https://informatica.i-learn.unito.it/course/view.php?id=2458"><span itemprop="title">ProgrIII-2022/23</span></a></span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25BA;</span> </span></li><li><span tabindex="0">24 ottobre - 30 ottobre</span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25BA;</span> </span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" title="Pagina" aria-current="page" href="https://informatica.i-learn.unito.it/mod/page/view.php?id=207582"><span itemprop="title">Progetto di laboratorio di Programmazione III</span></a></span></li></ul></nav></div>
+            <nav class="breadcrumb-button"></nav>
+        </div>
+            </div>
+
+    <div id="page-content" class="row-fluid">
+        <div id="region-bs-main-and-pre" class="span9">
+            <div class="row-fluid">
+            	                <section id="region-main" class="span8 pull-right">
+                                    <span class="notifications" id="user-notifications"></span><div role="main"><span id="maincontent"></span><h2>Progetto di laboratorio di Programmazione III</h2><div class="box py-3 generalbox center clearfix"><div class="no-overflow"><p dir="ltr" style="text-align: left;"></p><div><div><p>Si
+ sviluppi un’applicazione Java che implementi un servizio di posta 
+elettronica organizzato con un mail server che gestisce le caselle di 
+posta elettronica degli utenti e i mail client necessari per permettere 
+agli utenti di accedere alle proprie caselle di posta.</p>
+
+<ul>
+<li><p>Il
+ mail server gestisce una lista di caselle di posta elettronica e ne 
+mantiene la persistenza utilizzando file (txt o binari, a vostra scelta,
+ non si possono   usare database) per memorizzare i messaggi in modo 
+permanente.</p></li>
+<li><p>Il mail server ha un’interfaccia grafica sulla quale viene 
+visualizzato il log delle azioni effettuate dai mail clients e degli 
+eventi che occorrono durante  l’interazione tra i client e il server.</p>
+
+<ul>
+<li>Per esempio: apertura/chiusura di una connessione tra mail client e 
+server, invio di messaggi da parte di un client, ricezione di messaggi 
+da parte di un client, errori nella consegna di messaggi.</li>
+<li>NB: NON fare log di eventi locali al client come per esempio il 
+fatto che ha schiacciato un bottone, aperto una finestra o simili in 
+quanto non sono di pertinenza del server.</li>
+</ul></li>
+<li><p>Una casella di posta elettronica contiene:</p>
+
+<ul>
+<li>Nome dell’account di mail associato alla casella postale (es.giorgio@mia.mail.com).</li>
+<li>Lista (eventualmente vuota) di messaggi. I messaggi di posta 
+elettronica sono istanze di una classe Email che specifica ID, mittente,
+ destinatario/i, argomento, testo e data di spedizione del messaggio.</li>
+</ul></li>
+<li><p>Il mail client, associato a un particolare account di posta elettronica, ha un’interfaccia grafica così caratterizzata:</p>
+
+<ul>
+<li>L’interfaccia permette di:
+
+<ul>
+<li>creare e inviare un messaggio a uno o più destinatari (destinatari multipli di un solo messaggio di posta elettronica)</li>
+<li>leggere i messaggi della casella di posta</li>
+<li>rispondere a un messaggio ricevuto, in Reply (al mittente del 
+messaggio) e/o in Reply-all (al mittente e a tutti i destinatari del 
+messaggio ricevuto)</li>
+<li>girare (forward) un messaggio a uno o più account di posta elettronica</li>
+<li>rimuovere un messaggio dalla casella di posta.</li>
+</ul></li>
+<li><p>L’interfaccia mostra sempre la lista aggiornata dei messaggi in 
+casella e, quando arriva un nuovo messaggio, notifica l’utente 
+attraverso una finestra di dialogo.</p></li>
+<li><p>NB: per semplicità si associno i mail client agli utenti a 
+priori: non si richiede che il mail client offra le funzionalità di 
+registrazione di un account di posta. Inoltre, un mail client è 
+associato a una sola casella di posta elettronica e la sua interfaccia 
+non richiede autenticazione da parte dell’utente.</p></li>
+</ul></li>
+<li><p>NB: il mail client non deve andare in crash se il mail server 
+viene spento – gestire i problemi di connessione al mail server inviando
+ opportuni messaggi di errore all’utente e fare in modo che il mail 
+client si riconnetta automaticamente al server quando questo è novamente
+ attivo.</p></li>
+</ul>
+
+<p><strong>Requisiti tecnici</strong></p>
+
+<ul>
+<li>Per la dimostrazione si assuma di avere 3 utenti di posta 
+elettronica che comunicano tra loro. Si progetti però il sistema in modo
+ da renderlo scalabile a molti utenti.</li>
+<li>L’applicazione deve essere sviluppata in Java (JavaFXML) e basata su
+ architettura MVC, con Controller + viste e Model, seguendo i principi 
+del pattern Observer Observable. Si noti che non deve esserci 
+comunicazione diretta tra viste e model: ogni tipo di comunicazione tra 
+questi due livelli deve essere mediato dal controller o supportata dal 
+pattern Observer Observable. Non si usino le classi deprecate 
+Observer.java e Observable.java. Si usino le classi di JavaFX che 
+supportano il pattern Observer Observable.</li>
+<li>L’applicazione deve permettere all’utente di correggere eventuali 
+input errati (per es., in caso di inserimento di indirizzi di posta 
+elettronica non esistenti, il server deve inviare messaggio di errore al
+ client che ha inviato il messaggio; inoltre, in caso di inserimento di 
+indirizzi sintatticamente errati il client stesso deve segnalare il 
+problema senza tentare di inviare i messaggi al server).</li>
+<li>I client e il server dell’applicazione devono parallelizzare le 
+attività che non necessitano di esecuzione sequenziale e gestire gli 
+eventuali problemi di accesso a risorse in mutua esclusione. NB: i 
+client e il server di mail devono essere applicazioni java distinte; la 
+creazione/gestione dei messaggi deve avvenire in parallelo alla 
+ricezione di altri messaggi.</li>
+<li>L’applicazione deve essere distribuita (i mail client e il server devono stare
+tutti su JVM distinte) attraverso l’uso di Socket Java.</li>
+</ul>
+
+<p><strong>Requisiti dell’interfaccia utente</strong></p>
+
+<p>L’interfaccia utente deve essere:</p>
+
+<ul>
+<li>Comprensibile (trasparenza). In particolare, a fronte di errori, deve segnalare il problema all’utente.</li>
+<li>Ragionevolmente efficiente per permettere all’utente di eseguire le 
+operazioni con un numero minimo di click e di inserimenti di dati.</li>
+<li>Deve essere implementata utilizzando JavaFXML e, se necessario, 
+Thread java. Non è richiesto, ma consigliato, l’uso di Java Beans, 
+properties e binding di properties.</li>
+</ul>
+
+<p><strong>Note</strong>:
+  - Si raccomanda di prestare molta attenzione alla progettazione 
+dell’applicazione per facilitare il parallelismo nell’esecuzione delle 
+istruzioni e la distribuzione su JVM diverse.
+  - Si ricorda che:
+    - Il progetto SW può essere svolto in gruppo (max 3 persone) o 
+individualmente. Se lo si svolge in gruppo la discussione deve essere 
+fatta dall’intero gruppo in soluzione unica.
+    - La discussione potrà essere fatta nelle date di appello orale 
+dell’insegnamento, che saranno distribuite su tutto l’Anno Accademico.
+    - Si può discutere il progetto SW prima o dopo aver sostenuto la 
+prova orale.
+  - Come da regolamento d’esame il voto finale si ottiene come media del
+ voto della prova orale e della discussione di laboratorio (i due voti 
+hanno ugual peso nella media).
+  - Il voto finale deve essere registrato entro fine settembre 2022, 
+data oltre la quale non è possibile mantenere i voti parziali. Leggere 
+il regolamento d’esame sulla pagina web delll’insegnamento per  
+ulteriori dettagli.</p>
+</div></div><br><p></p></div></div><div class="modified">Ultime modifiche: giovedì, 27 ottobre 2022, 13:26</div></div><div class="mt-5 mb-1 activity-navigation container-fluid">
+<div class="row">
+    <div class="col-md-4">        <div class="float-left">
+                <a href="https://informatica.i-learn.unito.it/mod/folder/view.php?id=207930&forceview=1" id="prev-activity-link" class="btn btn-link" >&#x25C4; Soluzioni esercizi Observer-Observable e MVC</a>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="mdl-align">
+            <div class="urlselect">
+    <form method="post" action="https://informatica.i-learn.unito.it/course/jumpto.php" class="form-inline" id="url_select_f64f8700e5239e54">
+        <input type="hidden" name="sesskey" value="uoLK1vDyh8">
+            <label for="jump-to-activity" class="sr-only">
+                Vai a...
+            </label>
+        <select  id="jump-to-activity" class="custom-select urlselect" name="jump"
+                 >
+                    <option value="" selected>Vai a...</option>
+                    <option value="/mod/forum/view.php?id=197676&amp;forceview=1" >Annunci</option>
+                    <option value="/mod/forum/view.php?id=197680&amp;forceview=1" >Forum libero</option>
+                    <option value="/mod/url/view.php?id=197684&amp;forceview=1" >Pagina del corso di Programmazione III con orario e regolamento d'esame</option>
+                    <option value="/mod/url/view.php?id=197686&amp;forceview=1" >Pagina del corso di Istituzioni di Programmazione Distribuita in Rete, con orario e regolamento d'esame</option>
+                    <option value="/mod/url/view.php?id=197692&amp;forceview=1" >Prove d'esame individualizzate</option>
+                    <option value="/mod/folder/view.php?id=197694&amp;forceview=1" >TESTI D'ESAME 2019/20</option>
+                    <option value="/mod/folder/view.php?id=197696&amp;forceview=1" >TESTI D'ESAME 20/21</option>
+                    <option value="/mod/folder/view.php?id=197702&amp;forceview=1" >Testi d'esame 2021/22</option>
+                    <option value="/mod/folder/view.php?id=211586&amp;forceview=1" >ESAMI 2022-23</option>
+                    <option value="/mod/url/view.php?id=204886&amp;forceview=1" >Link all'orario delle lezioni (da consultare sempre!)</option>
+                    <option value="/mod/folder/view.php?id=197704&amp;forceview=1" >Introduzione all'insegnamento</option>
+                    <option value="/mod/folder/view.php?id=197706&amp;forceview=1" >Introduzione a Object Oriented design e programming</option>
+                    <option value="/mod/folder/view.php?id=197714&amp;forceview=1" >Ripasso e approfondimento di ereditarietà (il materiale online copre anche la parte 2 della prossima settimana)</option>
+                    <option value="/mod/url/view.php?id=205154&amp;forceview=1" >Registrazione lezione (ProgIII - T3)</option>
+                    <option value="/mod/page/view.php?id=197708&amp;forceview=1" >HELP: Installazione del software per le esercitazioni e progetto SW</option>
+                    <option value="/mod/folder/view.php?id=197710&amp;forceview=1" >Introduzione all'IDE IntelliJ IDEA</option>
+                    <option value="/mod/page/view.php?id=197712&amp;forceview=1" >Esercizio per prendere confidenza con IntelliJ IDEA</option>
+                    <option value="/mod/folder/view.php?id=197718&amp;forceview=1" >Esempi: ereditarietà (altri)</option>
+                    <option value="/mod/folder/view.php?id=197720&amp;forceview=1" >Java Reflection</option>
+                    <option value="/mod/folder/view.php?id=197722&amp;forceview=1" >Ripasso gestione memoria di JVM e variabili di istanza/classe</option>
+                    <option value="/mod/url/view.php?id=206124&amp;forceview=1" >Lab: registrazione lezione (T3)</option>
+                    <option value="/mod/page/view.php?id=206066&amp;forceview=1" >Esercizi: ereditarietà</option>
+                    <option value="/mod/folder/view.php?id=197724&amp;forceview=1" >Esercizi: ereditarietà (soluzioni)</option>
+                    <option value="/mod/resource/view.php?id=197726&amp;forceview=1" >Esercizio opzionale - ereditarietà e polimorfismo</option>
+                    <option value="/mod/folder/view.php?id=197728&amp;forceview=1" >Tipi generici e collezioni</option>
+                    <option value="/mod/url/view.php?id=206996&amp;forceview=1" >Registrazione lezione lab T3</option>
+                    <option value="/mod/folder/view.php?id=197730&amp;forceview=1" >Esercizi: tipi generici</option>
+                    <option value="/mod/resource/view.php?id=206658&amp;forceview=1" >Esercizi sui tipi generici -- soluzioni</option>
+                    <option value="/mod/folder/view.php?id=197732&amp;forceview=1" >Classi innestate</option>
+                    <option value="/mod/folder/view.php?id=197734&amp;forceview=1" >Trattamento delle eccezioni</option>
+                    <option value="/mod/url/view.php?id=206994&amp;forceview=1" >Registrazione lezione lab T3 -- Introduzione a git</option>
+                    <option value="/mod/resource/view.php?id=197736&amp;forceview=1" >Slides di introduzione a Git</option>
+                    <option value="/mod/page/view.php?id=197738&amp;forceview=1" >Esercizi: Git</option>
+                    <option value="/mod/folder/view.php?id=197740&amp;forceview=1" >Ereditarieta - schemi complessi di programmazione</option>
+                    <option value="/mod/folder/view.php?id=197742&amp;forceview=1" >Input/Output</option>
+                    <option value="/mod/folder/view.php?id=197744&amp;forceview=1" >GUI - parte 1</option>
+                    <option value="/mod/resource/view.php?id=207030&amp;forceview=1" >Slides aggiornate di GIT</option>
+                    <option value="/mod/resource/view.php?id=207034&amp;forceview=1" >GIT esercizi</option>
+                    <option value="/mod/url/view.php?id=207620&amp;forceview=1" >Registrazione lezione lab T3 -- Kernel / Modulo</option>
+                    <option value="/mod/folder/view.php?id=197748&amp;forceview=1" >Esercizio Kernel-Modulo</option>
+                    <option value="/mod/resource/view.php?id=207276&amp;forceview=1" >Soluzione esercizi kernel-modulo</option>
+                    <option value="/mod/folder/view.php?id=197746&amp;forceview=1" >GUI - parte 2</option>
+                    <option value="/mod/folder/view.php?id=197750&amp;forceview=1" >Observer Observable</option>
+                    <option value="/mod/folder/view.php?id=197752&amp;forceview=1" >GUI - pattern MVC</option>
+                    <option value="/mod/folder/view.php?id=197758&amp;forceview=1" >Esercizi GUI e Observer Observable</option>
+                    <option value="/mod/url/view.php?id=207622&amp;forceview=1" >Registrazione lezione lab T3 -- MVC e Observer / Observable</option>
+                    <option value="/mod/folder/view.php?id=207930&amp;forceview=1" >Soluzioni esercizi Observer-Observable e MVC</option>
+                    <option value="/mod/folder/view.php?id=197756&amp;forceview=1" >Overview di XML</option>
+                    <option value="/mod/folder/view.php?id=197760&amp;forceview=1" >JavaFX</option>
+                    <option value="/mod/folder/view.php?id=207822&amp;forceview=1" >JavaFXML - parte 1</option>
+                    <option value="/mod/folder/view.php?id=197762&amp;forceview=1" >JavaFX/FXML - parte 2</option>
+                    <option value="/mod/folder/view.php?id=197772&amp;forceview=1" >Thread - parte 1</option>
+                    <option value="/mod/page/view.php?id=197766&amp;forceview=1" >Esercizi su JavaFXML</option>
+                    <option value="/mod/folder/view.php?id=197782&amp;forceview=1" >soluzione esercizio JavaFXML (client mail)</option>
+                    <option value="/mod/folder/view.php?id=197774&amp;forceview=1" >Thread - parte 2</option>
+                    <option value="/mod/folder/view.php?id=197778&amp;forceview=1" >Esercizio: java thread</option>
+                    <option value="/mod/folder/view.php?id=197784&amp;forceview=1" >Thread - parte 3</option>
+                    <option value="/mod/folder/view.php?id=197786&amp;forceview=1" >Esercizi sui Thread: Risorse in mutua esclusione e Thread Pools</option>
+                    <option value="/mod/folder/view.php?id=197798&amp;forceview=1" >Socket Java</option>
+                    <option value="/mod/folder/view.php?id=197754&amp;forceview=1" >Approfondimento su implementazione di eventi</option>
+                    <option value="/mod/url/view.php?id=208966&amp;forceview=1" >Esecuzione di istanze multiple di una applicazione in parallelo (allow multiple instances)</option>
+                    <option value="/mod/url/view.php?id=197796&amp;forceview=1" >HELP: leggere/scrivere oggetti su Socket</option>
+                    <option value="/mod/folder/view.php?id=197800&amp;forceview=1" >Esercizio socket</option>
+        </select>
+            <noscript>
+                <input type="submit" class="btn btn-secondary ml-1" value="Vai">
+            </noscript>
+    </form>
+</div>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="float-right">
+                <a href="https://informatica.i-learn.unito.it/mod/folder/view.php?id=197756&forceview=1" id="next-activity-link" class="btn btn-link" >Overview di XML &#x25BA;</a>
+
+        </div>
+</div>
+</div>
+</div>                </section>
+                <aside id="block-region-side-pre" class="span4 desktop-first-column pull-left block-region" data-blockregion="side-pre" data-droptarget="1"><a href="#sb-1" class="sr-only sr-only-focusable">Salta Navigazione</a>
+
+<section id="inst20425"
+     class=" block_navigation block  card mb-3"
+     role="navigation"
+     data-block="navigation"
+          aria-labelledby="instance-20425-header"
+     >
+
+    <div class="card-body p-3">
+
+            <h5 id="instance-20425-header" class="card-title d-inline">Navigazione</h5>
+
+
+        <div class="card-text content mt-3">
+            <ul class="block_tree list" role="tree" data-ajax-loader="block_navigation/nav_loader"><li class="type_unknown depth_1 contains_branch" role="treeitem" aria-expanded="true" aria-owns="random64f8700e5239e2_group" data-collapsible="false" aria-labelledby="random64f8700e5239e1_label_1_1"><p class="tree_item branch canexpand navigation_node"><a tabindex="-1" id="random64f8700e5239e1_label_1_1" href="https://informatica.i-learn.unito.it/">Home</a></p><ul id="random64f8700e5239e2_group" role="group"><li class="type_setting depth_2 item_with_icon" role="treeitem" aria-labelledby="random64f8700e5239e3_label_2_2"><p class="tree_item hasicon"><a tabindex="-1" id="random64f8700e5239e3_label_2_2" href="https://informatica.i-learn.unito.it/my/"><i class="icon fa fa-tachometer fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Dashboard</span></a></p></li><li class="type_course depth_2 contains_branch" role="treeitem" aria-expanded="false" aria-owns="random64f8700e5239e5_group" aria-labelledby="random64f8700e5239e3_label_2_3"><p class="tree_item branch"><span tabindex="-1" id="random64f8700e5239e3_label_2_3" title="Corso di Studi in Informatica - Universit&amp;agrave; di Torino">Pagine del sito</span></p><ul id="random64f8700e5239e5_group" role="group" aria-hidden="true"><li class="type_custom depth_3 item_with_icon" role="treeitem" aria-labelledby="random64f8700e5239e6_label_3_5"><p class="tree_item hasicon"><a tabindex="-1" id="random64f8700e5239e6_label_3_5" href="https://informatica.i-learn.unito.it/badges/view.php?type=1"><i class="icon fa fa-square fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Badge del sito</span></a></p></li><li class="type_setting depth_3 item_with_icon" role="treeitem" aria-labelledby="random64f8700e5239e6_label_3_6"><p class="tree_item hasicon"><a tabindex="-1" id="random64f8700e5239e6_label_3_6" href="https://informatica.i-learn.unito.it/tag/search.php"><i class="icon fa fa-square fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Tag</span></a></p></li><li class="type_custom depth_3 item_with_icon" role="treeitem" aria-labelledby="random64f8700e5239e6_label_3_7"><p class="tree_item hasicon"><a tabindex="-1" id="random64f8700e5239e6_label_3_7" href="https://informatica.i-learn.unito.it/calendar/view.php?view=month&amp;course=2458"><i class="icon fa fa-calendar fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Calendario</span></a></p></li></ul></li><li class="type_system depth_2 contains_branch" role="treeitem" aria-expanded="true" aria-owns="random64f8700e5239e10_group" aria-labelledby="random64f8700e5239e3_label_2_19"><p class="tree_item branch"><span tabindex="-1" id="random64f8700e5239e3_label_2_19">I miei corsi</span></p><ul id="random64f8700e5239e10_group" role="group"><li class="type_unknown depth_3 contains_branch" role="treeitem" aria-expanded="true" aria-owns="random64f8700e5239e12_group" aria-labelledby="random64f8700e5239e11_label_3_20"><p class="tree_item branch"><span tabindex="-1" id="random64f8700e5239e11_label_3_20">Anno Accademico 22/23</span></p><ul id="random64f8700e5239e12_group" role="group"><li class="type_unknown depth_4 contains_branch" role="treeitem" aria-expanded="false" aria-owns="random64f8700e5239e14_group" aria-labelledby="random64f8700e5239e13_label_4_21"><p class="tree_item branch canexpand"><span tabindex="-1" id="random64f8700e5239e13_label_4_21">Secondo anno Laurea DM270</span></p><ul id="random64f8700e5239e14_group" role="group" aria-hidden="true"><li class="type_course depth_5 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_2598" data-node-key="2598" data-node-type="20" aria-labelledby="random64f8700e5239e15_label_5_22"><p class="tree_item branch" id="expandable_branch_20_2598"><a tabindex="-1" id="random64f8700e5239e15_label_5_22" title="Laboratorio di Algoritmi e Strutture Dati 22-23" href="https://informatica.i-learn.unito.it/course/view.php?id=2598">LabASD 22-23</a></p></li><li class="type_course depth_5 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_2574" data-node-key="2574" data-node-type="20" aria-labelledby="random64f8700e5239e15_label_5_23"><p class="tree_item branch" id="expandable_branch_20_2574"><a tabindex="-1" id="random64f8700e5239e15_label_5_23" title="Laboratorio di Sistemi Operativi - Corso A - Turno T1" href="https://informatica.i-learn.unito.it/course/view.php?id=2574">SOA_lab_T1_22-23</a></p></li><li class="type_course depth_5 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_2572" data-node-key="2572" data-node-type="20" aria-labelledby="random64f8700e5239e15_label_5_24"><p class="tree_item branch" id="expandable_branch_20_2572"><a tabindex="-1" id="random64f8700e5239e15_label_5_24" title="Laboratorio di Sistemi Operativi - Corso B - Turno T4" href="https://informatica.i-learn.unito.it/course/view.php?id=2572">SOB_Lab_T4_22-23</a></p></li><li class="type_course depth_5 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_2556" data-node-key="2556" data-node-type="20" aria-labelledby="random64f8700e5239e15_label_5_25"><p class="tree_item branch" id="expandable_branch_20_2556"><a tabindex="-1" id="random64f8700e5239e15_label_5_25" title="Sistemi Operativi A (teoria) a. a. 2022-2023" href="https://informatica.i-learn.unito.it/course/view.php?id=2556">SOA-22-23</a></p></li><li class="type_course depth_5 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_2548" data-node-key="2548" data-node-type="20" aria-labelledby="random64f8700e5239e15_label_5_26"><p class="tree_item branch" id="expandable_branch_20_2548"><a tabindex="-1" id="random64f8700e5239e15_label_5_26" title="Laboratorio di Sistemi Operativi: corso A (turno T2), corso B (turno T3). a.a 2022/23" href="https://informatica.i-learn.unito.it/course/view.php?id=2548">2022_SO_Lab_T2_T3</a></p></li><li class="type_course depth_5 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_2536" data-node-key="2536" data-node-type="20" aria-labelledby="random64f8700e5239e15_label_5_27"><p class="tree_item branch" id="expandable_branch_20_2536"><a tabindex="-1" id="random64f8700e5239e15_label_5_27" title="Sistemi Operativi B, aa 2022-2023" href="https://informatica.i-learn.unito.it/course/view.php?id=2536">SOB2223</a></p></li><li class="type_course depth_5 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_2514" data-node-key="2514" data-node-type="20" aria-labelledby="random64f8700e5239e15_label_5_28"><p class="tree_item branch" id="expandable_branch_20_2514"><a tabindex="-1" id="random64f8700e5239e15_label_5_28" title="Algoritmi e Strutture Dati, Corso B a.a. 2022/23" href="https://informatica.i-learn.unito.it/course/view.php?id=2514">ASD B 22/23</a></p></li></ul></li><li class="type_unknown depth_4 contains_branch" role="treeitem" aria-expanded="true" aria-owns="random64f8700e5239e16_group" aria-labelledby="random64f8700e5239e13_label_4_29"><p class="tree_item branch canexpand"><span tabindex="-1" id="random64f8700e5239e13_label_4_29">Terzo anno Laurea DM270</span></p><ul id="random64f8700e5239e16_group" role="group"><li class="type_unknown depth_5 contains_branch" role="treeitem" aria-expanded="true" aria-owns="random64f8700e5239e18_group" aria-labelledby="random64f8700e5239e17_label_5_30"><p class="tree_item branch"><span tabindex="-1" id="random64f8700e5239e17_label_5_30">Informazione e Conoscenza</span></p><ul id="random64f8700e5239e18_group" role="group"><li class="type_course depth_6 contains_branch" role="treeitem" aria-expanded="true" aria-owns="random64f8700e5239e20_group" aria-labelledby="random64f8700e5239e19_label_6_31"><p class="tree_item branch canexpand"><a tabindex="-1" id="random64f8700e5239e19_label_6_31" title="Programmazione III, Istituzioni di programmazione in rete" href="https://informatica.i-learn.unito.it/course/view.php?id=2458">ProgrIII-2022/23</a></p><ul id="random64f8700e5239e20_group" role="group"><li class="type_container depth_7 contains_branch" role="treeitem" aria-expanded="false" aria-owns="random64f8700e5239e22_group" aria-labelledby="random64f8700e5239e21_label_7_32"><p class="tree_item branch"><a tabindex="-1" id="random64f8700e5239e21_label_7_32" href="https://informatica.i-learn.unito.it/user/index.php?id=2458">Partecipanti</a></p><ul id="random64f8700e5239e22_group" role="group" aria-hidden="true"><li class="type_user depth_8 item_with_icon" role="treeitem" aria-labelledby="random64f8700e5239e23_label_8_33"><p class="tree_item hasicon"><a tabindex="-1" id="random64f8700e5239e23_label_8_33" href="https://informatica.i-learn.unito.it/user/view.php?id=22914&amp;course=2458"><i class="icon fa fa-square fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Guanti Filippo</span></a></p></li></ul></li><li class="type_setting depth_7 item_with_icon" role="treeitem" aria-labelledby="random64f8700e5239e21_label_7_34"><p class="tree_item hasicon"><a tabindex="-1" id="random64f8700e5239e21_label_7_34" href="https://informatica.i-learn.unito.it/admin/tool/lp/coursecompetencies.php?courseid=2458"><i class="icon fa fa-check-square-o fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Competenze</span></a></p></li><li class="type_setting depth_7 item_with_icon" role="treeitem" aria-labelledby="random64f8700e5239e21_label_7_35"><p class="tree_item hasicon"><a tabindex="-1" id="random64f8700e5239e21_label_7_35" href="https://informatica.i-learn.unito.it/grade/report/index.php?id=2458"><i class="icon fa fa-table fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Valutazioni</span></a></p></li><li class="type_structure depth_7 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_36716" data-node-key="36716" data-node-type="30" aria-labelledby="random64f8700e5239e21_label_7_36"><p class="tree_item branch" id="expandable_branch_30_36716"><span tabindex="-1" id="random64f8700e5239e21_label_7_36">Informazioni Utili</span></p></li><li class="type_structure depth_7 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_36718" data-node-key="36718" data-node-type="30" aria-labelledby="random64f8700e5239e21_label_7_37"><p class="tree_item branch" id="expandable_branch_30_36718"><span tabindex="-1" id="random64f8700e5239e21_label_7_37">19 settembre - 25 settembre</span></p></li><li class="type_structure depth_7 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_36720" data-node-key="36720" data-node-type="30" aria-labelledby="random64f8700e5239e21_label_7_38"><p class="tree_item branch" id="expandable_branch_30_36720"><span tabindex="-1" id="random64f8700e5239e21_label_7_38">26 settembre - 2 ottobre</span></p></li><li class="type_structure depth_7 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_36722" data-node-key="36722" data-node-type="30" aria-labelledby="random64f8700e5239e21_label_7_39"><p class="tree_item branch" id="expandable_branch_30_36722"><span tabindex="-1" id="random64f8700e5239e21_label_7_39">3 ottobre - 9 ottobre</span></p></li><li class="type_structure depth_7 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_36724" data-node-key="36724" data-node-type="30" aria-labelledby="random64f8700e5239e21_label_7_40"><p class="tree_item branch" id="expandable_branch_30_36724"><span tabindex="-1" id="random64f8700e5239e21_label_7_40">10 ottobre - 16 ottobre</span></p></li><li class="type_structure depth_7 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_36726" data-node-key="36726" data-node-type="30" aria-labelledby="random64f8700e5239e21_label_7_41"><p class="tree_item branch" id="expandable_branch_30_36726"><span tabindex="-1" id="random64f8700e5239e21_label_7_41">17 ottobre - 23 ottobre</span></p></li><li class="type_structure depth_7 contains_branch" role="treeitem" aria-expanded="true" aria-owns="random64f8700e5239e27_group" aria-labelledby="random64f8700e5239e21_label_7_42"><p class="tree_item branch"><span tabindex="-1" id="random64f8700e5239e21_label_7_42">24 ottobre - 30 ottobre</span></p><ul id="random64f8700e5239e27_group" role="group"><li class="type_activity depth_8 item_with_icon" role="treeitem" aria-labelledby="random64f8700e5239e28_label_8_44"><p class="tree_item hasicon"><a tabindex="-1" id="random64f8700e5239e28_label_8_44" title="Cartella" href="https://informatica.i-learn.unito.it/mod/folder/view.php?id=197746"><img class="icon navicon" alt="Cartella" title="Cartella" src="https://informatica.i-learn.unito.it/theme/image.php/lambda/folder/1692604098/icon" /><span class="item-content-wrap">GUI - parte 2</span></a></p></li><li class="type_activity depth_8 item_with_icon" role="treeitem" aria-labelledby="random64f8700e5239e28_label_8_45"><p class="tree_item hasicon"><a tabindex="-1" id="random64f8700e5239e28_label_8_45" title="Cartella" href="https://informatica.i-learn.unito.it/mod/folder/view.php?id=197750"><img class="icon navicon" alt="Cartella" title="Cartella" src="https://informatica.i-learn.unito.it/theme/image.php/lambda/folder/1692604098/icon" /><span class="item-content-wrap">Observer Observable</span></a></p></li><li class="type_activity depth_8 item_with_icon" role="treeitem" aria-labelledby="random64f8700e5239e28_label_8_46"><p class="tree_item hasicon"><a tabindex="-1" id="random64f8700e5239e28_label_8_46" title="Cartella" href="https://informatica.i-learn.unito.it/mod/folder/view.php?id=197752"><img class="icon navicon" alt="Cartella" title="Cartella" src="https://informatica.i-learn.unito.it/theme/image.php/lambda/folder/1692604098/icon" /><span class="item-content-wrap">GUI - pattern MVC</span></a></p></li><li class="type_activity depth_8 item_with_icon" role="treeitem" aria-labelledby="random64f8700e5239e28_label_8_48"><p class="tree_item hasicon"><a tabindex="-1" id="random64f8700e5239e28_label_8_48" title="Cartella" href="https://informatica.i-learn.unito.it/mod/folder/view.php?id=197758"><img class="icon navicon" alt="Cartella" title="Cartella" src="https://informatica.i-learn.unito.it/theme/image.php/lambda/folder/1692604098/icon" /><span class="item-content-wrap">Esercizi GUI e Observer Observable</span></a></p></li><li class="type_activity depth_8 item_with_icon" role="treeitem" aria-labelledby="random64f8700e5239e28_label_8_49"><p class="tree_item hasicon"><a tabindex="-1" id="random64f8700e5239e28_label_8_49" title="URL" href="https://informatica.i-learn.unito.it/mod/url/view.php?id=207622"><img class="icon navicon" alt="URL" title="URL" src="https://informatica.i-learn.unito.it/theme/image.php/lambda/url/1692604098/icon" /><span class="item-content-wrap">Registrazione lezione lab T3 -- MVC e Observer / O...</span></a></p></li><li class="type_activity depth_8 item_with_icon" role="treeitem" aria-labelledby="random64f8700e5239e28_label_8_50"><p class="tree_item hasicon"><a tabindex="-1" id="random64f8700e5239e28_label_8_50" title="Cartella" href="https://informatica.i-learn.unito.it/mod/folder/view.php?id=207930"><img class="icon navicon" alt="Cartella" title="Cartella" src="https://informatica.i-learn.unito.it/theme/image.php/lambda/folder/1692604098/icon" /><span class="item-content-wrap">Soluzioni esercizi Observer-Observable e MVC</span></a></p></li><li class="type_activity depth_8 item_with_icon current_branch" role="treeitem" aria-labelledby="random64f8700e5239e28_label_8_52"><p class="tree_item hasicon active_tree_node"><a tabindex="-1" id="random64f8700e5239e28_label_8_52" title="Pagina" href="https://informatica.i-learn.unito.it/mod/page/view.php?id=207582"><img class="icon navicon" alt="Pagina" title="Pagina" src="https://informatica.i-learn.unito.it/theme/image.php/lambda/page/1692604098/icon" /><span class="item-content-wrap">Progetto di laboratorio di Programmazione III</span></a></p></li></ul></li><li class="type_structure depth_7 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_36730" data-node-key="36730" data-node-type="30" aria-labelledby="random64f8700e5239e21_label_7_53"><p class="tree_item branch" id="expandable_branch_30_36730"><span tabindex="-1" id="random64f8700e5239e21_label_7_53">31 ottobre - 6 novembre</span></p></li><li class="type_structure depth_7 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_36732" data-node-key="36732" data-node-type="30" aria-labelledby="random64f8700e5239e21_label_7_54"><p class="tree_item branch" id="expandable_branch_30_36732"><span tabindex="-1" id="random64f8700e5239e21_label_7_54">7 novembre - 13 novembre</span></p></li><li class="type_structure depth_7 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_36734" data-node-key="36734" data-node-type="30" aria-labelledby="random64f8700e5239e21_label_7_55"><p class="tree_item branch" id="expandable_branch_30_36734"><span tabindex="-1" id="random64f8700e5239e21_label_7_55">14 novembre - 20 novembre</span></p></li><li class="type_structure depth_7 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_36736" data-node-key="36736" data-node-type="30" aria-labelledby="random64f8700e5239e21_label_7_56"><p class="tree_item branch" id="expandable_branch_30_36736"><span tabindex="-1" id="random64f8700e5239e21_label_7_56">21 novembre - 27 novembre</span></p></li><li class="type_structure depth_7 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_36738" data-node-key="36738" data-node-type="30" aria-labelledby="random64f8700e5239e21_label_7_57"><p class="tree_item branch" id="expandable_branch_30_36738"><span tabindex="-1" id="random64f8700e5239e21_label_7_57">28 novembre - 4 dicembre</span></p></li><li class="type_structure depth_7 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_36740" data-node-key="36740" data-node-type="30" aria-labelledby="random64f8700e5239e21_label_7_58"><p class="tree_item branch" id="expandable_branch_30_36740"><span tabindex="-1" id="random64f8700e5239e21_label_7_58">5 dicembre - 11 dicembre</span></p></li><li class="type_system depth_7 item_with_icon" role="treeitem" aria-labelledby="random64f8700e5239e21_label_7_59"><p class="tree_item hasicon"><a tabindex="-1" id="random64f8700e5239e21_label_7_59" href="https://informatica.i-learn.unito.it/local/kalturamediagallery/index.php?courseid=2458"><img class="icon navicon" alt="" aria-hidden="true" src="https://informatica.i-learn.unito.it/theme/image.php/lambda/local_kalturamediagallery/1692604098/media-gallery" /><span class="item-content-wrap">Media Gallery</span></a></p></li></ul></li></ul></li><li class="type_course depth_5 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_2618" data-node-key="2618" data-node-type="20" aria-labelledby="random64f8700e5239e17_label_5_60"><p class="tree_item branch" id="expandable_branch_20_2618"><a tabindex="-1" id="random64f8700e5239e17_label_5_60" title="Sviluppo delle Applicazioni Software - Teoria A - 2022/23 (cognomi A-K)" href="https://informatica.i-learn.unito.it/course/view.php?id=2618">SAS-TeoA-2223 (cognomi A-K)</a></p></li><li class="type_course depth_5 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_2498" data-node-key="2498" data-node-type="20" aria-labelledby="random64f8700e5239e17_label_5_61"><p class="tree_item branch" id="expandable_branch_20_2498"><a tabindex="-1" id="random64f8700e5239e17_label_5_61" title="Sistemi Informativi a.a. 2022 - 2023" href="https://informatica.i-learn.unito.it/course/view.php?id=2498">Sist-Inf-2022-2023</a></p></li></ul></li></ul></li><li class="type_custom depth_3 item_with_icon" role="treeitem" aria-labelledby="random64f8700e5239e11_label_3_66"><p class="tree_item hasicon"><a tabindex="-1" id="random64f8700e5239e11_label_3_66" href="https://informatica.i-learn.unito.it/my/"><i class="icon fa fa-square fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Altro...</span></a></p></li></ul></li><li class="type_system depth_2 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_0_courses" data-node-key="courses" data-node-type="0" aria-labelledby="random64f8700e5239e3_label_2_67"><p class="tree_item branch" id="expandable_branch_0_courses"><a tabindex="-1" id="random64f8700e5239e3_label_2_67" href="https://informatica.i-learn.unito.it/course/index.php">Corsi</a></p></li><li class="type_system depth_2 item_with_icon" role="treeitem" aria-labelledby="random64f8700e5239e3_label_2_68"><p class="tree_item hasicon"><a tabindex="-1" id="random64f8700e5239e3_label_2_68" href="https://informatica.i-learn.unito.it/local/mymedia/mymedia.php"><img class="icon navicon" alt="" aria-hidden="true" src="https://informatica.i-learn.unito.it/theme/image.php/lambda/local_mymedia/1692604098/my-media" /><span class="item-content-wrap">My Media</span></a></p></li></ul></li></ul>
+            <div class="footer"></div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-1"></span><a href="#sb-2" class="sr-only sr-only-focusable">Salta Amministrazione</a>
+
+<section id="inst20426"
+     class=" block_settings block  card mb-3"
+     role="navigation"
+     data-block="settings"
+          aria-labelledby="instance-20426-header"
+     >
+
+    <div class="card-body p-3">
+
+            <h5 id="instance-20426-header" class="card-title d-inline">Amministrazione</h5>
+
+
+        <div class="card-text content mt-3">
+            <div id="settingsnav" class="box py-3 block_tree_box"><ul class="block_tree list" role="tree" data-ajax-loader="block_navigation/site_admin_loader"><li class="type_course depth_1 contains_branch" tabindex="-1" role="treeitem" aria-expanded="false" aria-owns="random64f8700e5239e39_group"><p class="tree_item root_node tree_item branch"><span tabindex="0">Amministrazione del corso</span></p><ul id="random64f8700e5239e39_group" role="group" aria-hidden="true"><li class="type_setting depth_2 item_with_icon" tabindex="-1" role="treeitem"><p class="tree_item hasicon tree_item leaf"><a href="https://informatica.i-learn.unito.it/enrol/self/unenrolself.php?enrolid=5512"><i class="icon fa fa-user fa-fw navicon" aria-hidden="true"  ></i>Disiscrivimi da ProgrIII-2022/23</a></p></li></ul></li></ul></div>
+            <div class="footer"></div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-2"></span></aside>            </div>
+        </div>
+        <aside id="block-region-side-post" class="span3 block-region" data-blockregion="side-post" data-droptarget="1"></aside>    </div>
+    
+    <!-- End Main Regions -->
+
+    <a href="#top" class="back-to-top"><span class="lambda-sr-only">Indietro</span></a>
+
+	</div>
+	<div
+    id="drawer-64f8700e5eb1764f8700e5239e55"
+    class=" drawer bg-white hidden"
+    aria-expanded="false"
+    aria-hidden="true"
+    data-region="right-hand-drawer"
+    role="region"
+    tabindex="0"
+>
+            <div id="message-drawer-64f8700e5eb1764f8700e5239e55" class="message-app" data-region="message-drawer" role="region">
+    		<div class="drawer-top p-2 border-bottom bg-secondary text-right">
+        		<a id="message-drawer-close-64f8700e5eb1764f8700e5239e55" class="" href="#">
+            		<i class="icon fa fa-window-close fa-fw "  title="Visualizza/nascondi menu messaggi" role="img" aria-label="Visualizza/nascondi menu messaggi"></i>
+        		</a>
+    		</div>
+            <div class="header-container position-relative" data-region="header-container">
+                <div class="hidden border-bottom p-1 px-sm-2" aria-hidden="true" data-region="view-contacts">
+                    <div class="d-flex align-items-center">
+                        <div class="align-self-stretch">
+                            <a class="h-100 d-flex align-items-center mr-2" href="#" data-route-back role="button">
+                                <span class="dir-rtl-hide"><i class="icon fa fa-caret-left fa-fw " aria-hidden="true"  ></i></span>
+                                <span class="dir-ltr-hide"><i class="icon fa fa-caret-right fa-fw " aria-hidden="true"  ></i></span>                            </a>
+                        </div>
+                        <div>
+                            Contatti
+                        </div>
+                        <div class="ml-auto">
+                            <a href="#" data-route="view-search" role="button" aria-label="Ricerca">
+                                <i class="icon fa fa-search fa-fw " aria-hidden="true"  ></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>                
+                <div
+                    class="hidden bg-white position-relative border-bottom p-1 px-sm-2"
+                    aria-hidden="true"
+                    data-region="view-conversation"
+                >
+                    <div class="hidden" data-region="header-content"></div>
+                    <div class="hidden" data-region="header-edit-mode">
+                        
+                        <div class="d-flex p-2 align-items-center">
+                            Messaggi selezionati:
+                            <span class="ml-1" data-region="message-selected-court">1</span>
+                            <button type="button" class="ml-auto close" aria-label="Annulla selezione messaggi"
+                                data-action="cancel-edit-mode">
+                                    <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div data-region="header-placeholder">
+                        <div class="d-flex">
+                            <div
+                                class="ml-2 rounded-circle bg-pulse-grey align-self-center"
+                                style="height: 38px; width: 38px"
+                            >
+                            </div>
+                            <div class="ml-2 " style="flex: 1">
+                                <div
+                                    class="mt-1 bg-pulse-grey w-75"
+                                    style="height: 16px;"
+                                >
+                                </div>
+                            </div>
+                            <div
+                                class="ml-2 bg-pulse-grey align-self-center"
+                                style="height: 16px; width: 20px"
+                            >
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="hidden position-absolute z-index-1"
+                        data-region="confirm-dialogue-container"
+                        style="top: 0; bottom: -1px; right: 0; left: 0; background: rgba(0,0,0,0.3);"
+                    ></div>
+                </div>                <div class="border-bottom px-2 py-3" aria-hidden="false"  data-region="view-overview">
+                    <div class="d-flex align-items-center">
+                        <div class="input-prepend d-flex flex-grow m-0">
+                            <span class="add-on bg-white pr-0">
+                                <i class="icon fa fa-search fa-fw " aria-hidden="true"  ></i>
+                            </span>
+                            <input
+                                type="text"
+                                class="form-control border-left-0 searchinput"
+                                placeholder="Ricerca"
+                                aria-label="Ricerca"
+                                data-region="view-overview-search-input"
+                            >
+                        </div>
+                        <div class="ml-2">
+                            <a
+                                href="#"
+                                data-route="view-settings"
+                                data-route-param="22914"
+                            >
+                                <i class="icon fa fa-cog fa-fw " aria-hidden="true"  ></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-right mt-3">
+                        <a href="#" data-route="view-contacts" role="button">
+                            <i class="icon fa fa-user fa-fw " aria-hidden="true"  ></i>
+                            Contatti
+                            <span class="badge bg-primary ml-2 hidden"
+                            data-region="contact-request-count"
+                            aria-label="Hai 0 richieste di contatto in attesa">
+                                0
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hidden border-bottom px-2 py-3 view-search"  aria-hidden="true" data-region="view-search">
+                    <div class="d-flex align-items-center">
+                        <a
+                            class="mr-2 align-self-stretch d-flex align-items-center"
+                            href="#"
+                            data-route-back
+                            data-action="cancel-search"
+                        >
+                            <span class="dir-rtl-hide"><i class="icon fa fa-caret-left fa-fw " aria-hidden="true"  ></i></span>
+                            <span class="dir-ltr-hide"><i class="icon fa fa-caret-right fa-fw " aria-hidden="true"  ></i></span>                        </a>
+                        <div class="input-append m-0 d-flex flex-grow">
+                            <input
+                                type="text"
+                                class="form-control border-right-0 searchinput"
+                                placeholder="Ricerca"
+                                aria-label="Ricerca"
+                                data-region="search-input"
+                            >
+                            <button
+                                class="btn m-0"
+                                type="button"
+                                data-action="search"
+                            >
+                                <span data-region="search-icon-container">
+                                    <i class="icon fa fa-search fa-fw " aria-hidden="true"  ></i>
+                                </span>
+                                <span class="hidden" data-region="loading-icon-container">
+                                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>                
+                <div class="hidden border-bottom p-1 px-sm-2 pb-sm-3" aria-hidden="true" data-region="view-settings">
+                    <div class="d-flex align-items-center">
+                        <div class="align-self-stretch" >
+                            <a class="h-100 d-flex mr-2 align-items-center" href="#" data-route-back role="button">
+                                <span class="dir-rtl-hide"><i class="icon fa fa-caret-left fa-fw " aria-hidden="true"  ></i></span>
+                                <span class="dir-ltr-hide"><i class="icon fa fa-caret-right fa-fw " aria-hidden="true"  ></i></span>                            </a>
+                        </div>
+                        <div>
+                            Impostazioni
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-container position-relative" data-region="body-container">
+                
+                <div
+                    class="hidden"
+                    data-region="view-contact"
+                    aria-hidden="true"
+                >
+                    <div class="p-2 pt-3" data-region="content-container"></div>
+                </div>                <div class="hidden h-100" aria-hidden="true" data-region="view-contacts" data-user-id="22914">
+                    <div class="d-flex flex-column h-100">
+                        <div class="p-3 border-bottom">
+                            <ul class="nav nav-pills d-flex m-0" role="tablist">
+                                <li class="nav-item w-50 align-self-stretch text-center active">
+                                    <a
+                                        id="contacts-tab-64f8700e5eb1764f8700e5239e55"
+                                        class="nav-link"
+                                        href="#contacts-tab-panel-64f8700e5eb1764f8700e5239e55"
+                                        data-toggle="tab"
+                                        data-action="show-contacts-section"
+                                        role="tab"
+                                        aria-controls="contacts-tab-panel-64f8700e5eb1764f8700e5239e55"
+                                        aria-selected="true"
+                                    >
+                                        Contatti
+                                    </a>
+                                </li>
+                                <li class="nav-item w-50 text-center">
+                                    <a
+                                        id="requests-tab-64f8700e5eb1764f8700e5239e55"
+                                        class="nav-link"
+                                        href="#requests-tab-panel-64f8700e5eb1764f8700e5239e55"
+                                        data-toggle="tab"
+                                        data-action="show-requests-section"
+                                        role="tab"
+                                        aria-controls="requests-tab-panel-64f8700e5eb1764f8700e5239e55"
+                                        aria-selected="false"
+                                    >
+                                        Richieste
+                                        <span class="badge bg-primary ml-2 hidden" data-region="contact-request-count">
+                                            0
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content d-flex flex-column h-100">
+                                            <div
+                    class="tab-pane fade in active h-100"
+                    style="overflow-y: auto"
+                    aria-live="polite"
+                    data-region="lazy-load-list"
+                    data-user-id="22914"
+                                        id="contacts-tab-panel-64f8700e5eb1764f8700e5239e55"
+                    data-section="contacts"
+                    role="tabpanel"
+                    aria-labelledby="contacts-tab-64f8700e5eb1764f8700e5239e55"
+
+                >
+                    <div class="onepix" style="height: 1px;">&nbsp;</div>
+                    
+                    <div class="hidden text-center p-2" data-region="empty-message-container">
+                        Nessun contatto
+                    </div>
+                    <div class="hidden list-group" data-region="content-container">
+                        
+                    </div>
+                    <div class="list-group" data-region="placeholder-container">
+                        
+                    </div>
+                    <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                        <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+                    </div>
+                </div>
+                
+                                            <div
+                    class="tab-pane fade h-100"
+                    style="overflow-y: auto"
+                    aria-live="polite"
+                    data-region="lazy-load-list"
+                    data-user-id="22914"
+                                        id="requests-tab-panel-64f8700e5eb1764f8700e5239e55"
+                    data-section="requests"
+                    role="tabpanel"
+                    aria-labelledby="requests-tab-64f8700e5eb1764f8700e5239e55"
+
+                >
+                    <div class="onepix" style="height: 1px;">&nbsp;</div>
+                    
+                    <div class="hidden text-center p-2" data-region="empty-message-container">
+                        Nessuna richiesta di contatto
+                    </div>
+                    <div class="hidden list-group" data-region="content-container">
+                        
+                    </div>
+                    <div class="list-group" data-region="placeholder-container">
+                        
+                    </div>
+                    <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                        <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+                    </div>
+                </div>
+                        </div>
+                    </div>
+                </div>                
+                <div
+                    class="view-conversation hidden h-100"
+                    aria-hidden="true"
+                    data-region="view-conversation"
+                    data-user-id="22914"
+                    data-midnight="1693951200"
+                    data-message-poll-min="10"
+                    data-message-poll-max="120"
+                    data-message-poll-after-max="300"
+                    style="overflow-y: auto; overflow-x: hidden"
+                >
+                    <div class="position-relative h-100" data-region="content-container" style="overflow-y: auto; overflow-x: hidden">
+                        <div class="content-message-container hidden h-100 px-2 pt-0" data-region="content-message-container" role="log" style="overflow-y: auto; overflow-x: hidden">
+                            <div class="py-3 sticky-top z-index-1 border-bottom text-center hidden" data-region="contact-request-sent-message-container">
+                                <p class="m-0">Richiesta di contatto inviata</p>
+                                <p class="font-italic font-weight-light" data-region="text"></p>
+                            </div>
+                            <div class="p-3 text-center hidden" data-region="self-conversation-message-container">
+                                <p class="m-0">Spazio personale</p>
+                                <p class="font-italic font-weight-light" data-region="text">Salva per uso futuro i messaggi in bozza, i collegamenti, le note, eccetera,</p>
+                           </div>
+                            <div class="hidden text-center p-3" data-region="more-messages-loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</div>
+                        </div>
+                        <div class="p-4 w-100 h-100 hidden position-absolute z-index-1" data-region="confirm-dialogue-container" style="top: 0; background: rgba(0,0,0,0.3);">
+                            
+                            <div class="p-3 bg-white" data-region="confirm-dialogue" role="alert">
+                                <p class="text-muted" data-region="dialogue-text"></p>
+                                <div class="mb-2 custom-control custom-checkbox hidden" data-region="delete-messages-for-all-users-toggle-container">
+                                    <input type="checkbox" class="custom-control-input" id="delete-messages-for-all-users" data-region="delete-messages-for-all-users-toggle">
+                                    <label class="custom-control-label text-muted" for="delete-messages-for-all-users">
+                                        Elimina per me e per tutti gli altri
+                                    </label>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-block">
+                                    <span data-region="dialogue-button-text">Blocco</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-unblock">
+                                    <span data-region="dialogue-button-text">Sblocca</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-remove-contact">
+                                    <span data-region="dialogue-button-text">Rimuovi</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-add-contact">
+                                    <span data-region="dialogue-button-text">Aggiungi</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-delete-selected-messages">
+                                    <span data-region="dialogue-button-text">Elimina</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-delete-conversation">
+                                    <span data-region="dialogue-button-text">Elimina</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="request-add-contact">
+                                    <span data-region="dialogue-button-text">Invia richiesta di contatto</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="accept-contact-request">
+                                    <span data-region="dialogue-button-text">Accetta ed aggiungi ai contatti</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-block hidden" data-action="decline-contact-request">
+                                    <span data-region="dialogue-button-text">Rifiuta</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block" data-action="okay-confirm">OK</button>
+                                <button type="button" class="btn btn-secondary btn-block" data-action="cancel-confirm">Annulla</button>
+                            </div>
+                        </div>
+                        <div class="px-2 pb-2 pt-0" data-region="content-placeholder">
+                            <div class="h-100 d-flex flex-column">
+                                <div
+                                    class="px-2 pb-2 pt-0 bg-light h-100"
+                                    style="overflow-y: auto"
+                                >
+                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                </div>
+                            </div>                        </div>
+                    </div>
+                </div>
+                
+                <div
+                    class="hidden"
+                    aria-hidden="true"
+                    data-region="view-group-info"
+                >
+                    <div
+                        class="pt-3 h-100 d-flex flex-column"
+                        data-region="group-info-content-container"
+                        style="overflow-y: auto"
+                    ></div>
+                </div>                <div class="h-100 view-overview-body" aria-hidden="false" data-region="view-overview"  data-user-id="22914">
+                    <div id="message-drawer-view-overview-container-64f8700e5eb1764f8700e5239e55" class="d-flex flex-column h-100" style="overflow-y: auto">
+                            
+                            <div
+                                class="accordion-group section border-0 "
+                                data-region="view-overview-favourites"
+                            >
+                                <div id="view-overview-favourites-toggle" class="accordion-heading" data-region="toggle">
+                                    <button
+                                        class="btn btn-link w-100 text-left p-2 m-0 d-flex align-items-center overview-section-toggle collapsed"
+                                        data-toggle="collapse"
+                                        data-parent="#message-drawer-view-overview-container-64f8700e5eb1764f8700e5239e55"
+                                        data-target="#view-overview-favourites-target"
+                                        aria-expanded="false"
+                                        aria-controls="view-overview-favourites-target"
+                                    >
+                                        <span class="collapsed-icon-container">
+                                            <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"  ></i>
+                                        </span>
+                                        <span class="expanded-icon-container">
+                                            <i class="icon fa fa-caret-down fa-fw " aria-hidden="true"  ></i>
+                                        </span>
+                                        <strong>Preferiti</strong>
+                                        <small class="hidden ml-1" data-region="section-total-count-container">
+                                            (<span data-region="section-total-count"></span>)
+                                        </small>
+                                        <span class="hidden ml-2" data-region="loading-icon-container">
+                                            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+                                        </span>
+                                        <span class="hidden badge badge-pill badge-primary ml-auto bg-primary" data-region="section-unread-count">
+                                            
+                                        </span>
+                                    </button>
+                                </div>
+                                                            <div
+                                class=" accordion-body collapse border-bottom "
+                                style="overflow-y: auto"
+                                aria-live="polite"
+                                data-region="lazy-load-list"
+                                data-user-id="22914"
+                                            id="view-overview-favourites-target"
+            aria-labelledby="view-overview-favourites-toggle"
+            data-parent="#message-drawer-view-overview-container"
+
+                            >
+                                <div class="onepix" style="height: 1px;">&nbsp;</div>
+                                
+                                <div class="hidden text-center p-2" data-region="empty-message-container">
+                                            <p class="text-muted mt-2">Nessuna conversazione contrassegnata</p>
+
+                                </div>
+                                <div class="hidden list-group" data-region="content-container">
+                                    
+                                </div>
+                                <div class="list-group" data-region="placeholder-container">
+                                            <div class="text-center py-2"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</div>
+
+                                </div>
+                                <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            <div
+                                class="accordion-group section border-0 "
+                                data-region="view-overview-group-messages"
+                            >
+                                <div id="view-overview-group-messages-toggle" class="accordion-heading" data-region="toggle">
+                                    <button
+                                        class="btn btn-link w-100 text-left p-2 m-0 d-flex align-items-center overview-section-toggle collapsed"
+                                        data-toggle="collapse"
+                                        data-parent="#message-drawer-view-overview-container-64f8700e5eb1764f8700e5239e55"
+                                        data-target="#view-overview-group-messages-target"
+                                        aria-expanded="false"
+                                        aria-controls="view-overview-group-messages-target"
+                                    >
+                                        <span class="collapsed-icon-container">
+                                            <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"  ></i>
+                                        </span>
+                                        <span class="expanded-icon-container">
+                                            <i class="icon fa fa-caret-down fa-fw " aria-hidden="true"  ></i>
+                                        </span>
+                                        <strong>Gruppo</strong>
+                                        <small class="hidden ml-1" data-region="section-total-count-container">
+                                            (<span data-region="section-total-count"></span>)
+                                        </small>
+                                        <span class="hidden ml-2" data-region="loading-icon-container">
+                                            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+                                        </span>
+                                        <span class="hidden badge badge-pill badge-primary ml-auto bg-primary" data-region="section-unread-count">
+                                            
+                                        </span>
+                                    </button>
+                                </div>
+                                                            <div
+                                class=" accordion-body collapse border-bottom "
+                                style="overflow-y: auto"
+                                aria-live="polite"
+                                data-region="lazy-load-list"
+                                data-user-id="22914"
+                                            id="view-overview-group-messages-target"
+            aria-labelledby="view-overview-group-messages-toggle"
+            data-parent="#message-drawer-view-overview-container"
+
+                            >
+                                <div class="onepix" style="height: 1px;">&nbsp;</div>
+                                
+                                <div class="hidden text-center p-2" data-region="empty-message-container">
+                                            <p class="text-muted mt-2">Nessuna conversazione di gruppo</p>
+
+                                </div>
+                                <div class="hidden list-group" data-region="content-container">
+                                    
+                                </div>
+                                <div class="list-group" data-region="placeholder-container">
+                                            <div class="text-center py-2"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</div>
+
+                                </div>
+                                <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            <div
+                                class="accordion-group section border-0 "
+                                data-region="view-overview-messages"
+                            >
+                                <div id="view-overview-messages-toggle" class="accordion-heading" data-region="toggle">
+                                    <button
+                                        class="btn btn-link w-100 text-left p-2 m-0 d-flex align-items-center overview-section-toggle collapsed"
+                                        data-toggle="collapse"
+                                        data-parent="#message-drawer-view-overview-container-64f8700e5eb1764f8700e5239e55"
+                                        data-target="#view-overview-messages-target"
+                                        aria-expanded="false"
+                                        aria-controls="view-overview-messages-target"
+                                    >
+                                        <span class="collapsed-icon-container">
+                                            <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"  ></i>
+                                        </span>
+                                        <span class="expanded-icon-container">
+                                            <i class="icon fa fa-caret-down fa-fw " aria-hidden="true"  ></i>
+                                        </span>
+                                        <strong>privato</strong>
+                                        <small class="hidden ml-1" data-region="section-total-count-container">
+                                            (<span data-region="section-total-count"></span>)
+                                        </small>
+                                        <span class="hidden ml-2" data-region="loading-icon-container">
+                                            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+                                        </span>
+                                        <span class="hidden badge badge-pill badge-primary ml-auto bg-primary" data-region="section-unread-count">
+                                            
+                                        </span>
+                                    </button>
+                                </div>
+                                                            <div
+                                class=" accordion-body collapse border-bottom "
+                                style="overflow-y: auto"
+                                aria-live="polite"
+                                data-region="lazy-load-list"
+                                data-user-id="22914"
+                                            id="view-overview-messages-target"
+            aria-labelledby="view-overview-messages-toggle"
+            data-parent="#message-drawer-view-overview-container"
+
+                            >
+                                <div class="onepix" style="height: 1px;">&nbsp;</div>
+                                
+                                <div class="hidden text-center p-2" data-region="empty-message-container">
+                                            <p class="text-muted mt-2">Nessuna conversazione privata</p>
+
+                                </div>
+                                <div class="hidden list-group" data-region="content-container">
+                                    
+                                </div>
+                                <div class="list-group" data-region="placeholder-container">
+                                            <div class="text-center py-2"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</div>
+
+                                </div>
+                                <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+                
+                <div
+                    data-region="view-search"
+                    aria-hidden="true"
+                    class="h-100 hidden"
+                    data-user-id="22914"
+                    data-users-offset="0"
+                    data-messages-offset="0"
+                    style="overflow-y: auto"
+                    
+                >
+                    <div class="hidden" data-region="search-results-container" style="overflow-y: auto">
+                        
+                        <div class="d-flex flex-column">
+                            <div class="mb-3 bg-white" data-region="all-contacts-container">
+                                <div data-region="contacts-container"  class="pt-2">
+                                    <h4 class="h6 px-2">Contatti</h4>
+                                    <div class="list-group" data-region="list"></div>
+                                </div>
+                                <div data-region="non-contacts-container" class="pt-2 border-top">
+                                    <h4 class="h6 px-2">Non tra i contatti</h4>
+                                    <div class="list-group" data-region="list"></div>
+                                </div>
+                                <div class="text-right">
+                                    <button class="btn btn-link text-primary" data-action="load-more-users">
+                                        <span data-region="button-text">Carica di più</span>
+                                        <span data-region="loading-icon-container" class="hidden"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-white" data-region="messages-container">
+                                <h4 class="h6 px-2 pt-2">Messaggi</h4>
+                                <div class="list-group" data-region="list"></div>
+                                <div class="text-right">
+                                    <button class="btn btn-link text-primary" data-action="load-more-messages">
+                                        <span data-region="button-text">Carica di più</span>
+                                        <span data-region="loading-icon-container" class="hidden"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="hidden p-3 text-center" data-region="no-results-container">Nessun risultato</p>
+                        </div>                    </div>
+                    <div class="hidden" data-region="loading-placeholder">
+                        <div class="text-center pt-3 icon-size-4"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</div>
+                    </div>
+                    <div class="p-3 text-center" data-region="empty-message-container">
+                        <p>Cerca persone e messaggi</p>
+                    </div>
+                </div>                
+                <div class="h-100 hidden bg-white" aria-hidden="true" data-region="view-settings">
+                    <div class="hidden" data-region="content-container">
+                        
+                        <div data-region="settings" class="p-3">
+                            <h3 class="h6 font-weight-bold">Privacy</h3>
+                            <p>È possibile definire quali utenti possono inviarti messaggi</p>
+                            <div data-preference="blocknoncontacts" class="mb-3">
+                                <fieldset>
+                                    <legend class="sr-only">Accetta messaggi da:</legend>
+                                        <div class="custom-control custom-radio mb-2">
+                                            <input
+                                                type="radio"
+                                                name="message_blocknoncontacts"
+                                                class="custom-control-input"
+                                                id="block-noncontacts-64f8700e5eb1764f8700e5239e55-1"
+                                                value="1"
+                                            >
+                                            <label class="custom-control-label ml-2" for="block-noncontacts-64f8700e5eb1764f8700e5239e55-1">
+                                                I miei contatti solamente
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-radio mb-2">
+                                            <input
+                                                type="radio"
+                                                name="message_blocknoncontacts"
+                                                class="custom-control-input"
+                                                id="block-noncontacts-64f8700e5eb1764f8700e5239e55-0"
+                                                value="0"
+                                            >
+                                            <label class="custom-control-label ml-2" for="block-noncontacts-64f8700e5eb1764f8700e5239e55-0">
+                                                I miei contatti e i miei compagni di corso
+                                            </label>
+                                        </div>
+                                </fieldset>
+                            </div>
+                        
+                            <div class="hidden" data-region="notification-preference-container">
+                                <h3 class="mb-2 mt-4 h6 font-weight-bold">Preferenze notifiche</h3>
+                            </div>
+                        
+                            <h3 class="mb-2 mt-4 h6 font-weight-bold">Generale</h3>
+                            <div data-preference="entertosend">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="enter-to-send-64f8700e5eb1764f8700e5239e55" >
+                                    <label class="custom-control-label" for="enter-to-send-64f8700e5eb1764f8700e5239e55">
+                                        Tasto invio per spedire
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-region="placeholder-container">
+                        
+                        <div class="d-flex flex-column p-3">
+                            <div class="w-25 bg-pulse-grey h6" style="height: 18px"></div>
+                            <div class="w-75 bg-pulse-grey mb-4" style="height: 18px"></div>
+                            <div class="mb-3">
+                                <div class="w-100 d-flex mb-3">
+                                    <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px"></div>
+                                    <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                                </div>
+                                <div class="w-100 d-flex mb-3">
+                                    <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px"></div>
+                                    <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                                </div>
+                                <div class="w-100 d-flex mb-3">
+                                    <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px"></div>
+                                    <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                                </div>
+                            </div>
+                            <div class="w-50 bg-pulse-grey h6 mb-3 mt-2" style="height: 18px"></div>
+                            <div class="mb-4">
+                                <div class="w-100 d-flex mb-2 align-items-center">
+                                    <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px"></div>
+                                    <div class="bg-pulse-grey w-25 ml-2" style="height: 18px"></div>
+                                </div>
+                                <div class="w-100 d-flex mb-2 align-items-center">
+                                    <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px"></div>
+                                    <div class="bg-pulse-grey w-25 ml-2" style="height: 18px"></div>
+                                </div>
+                            </div>
+                            <div class="w-25 bg-pulse-grey h6 mb-3 mt-2" style="height: 18px"></div>
+                            <div class="mb-3">
+                                <div class="w-100 d-flex mb-2 align-items-center">
+                                    <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px"></div>
+                                    <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                                </div>
+                            </div>
+                        </div>                    </div>
+                </div>            </div>
+            <div class="footer-container position-relative" data-region="footer-container">
+                
+                <div
+                    class="hidden border-top bg-white position-relative"
+                    aria-hidden="true"
+                    data-region="view-conversation"
+                    data-enter-to-send="0"
+                >
+                    <div class="hidden p-sm-2" data-region="content-messages-footer-container">
+                        
+                            <div
+                                class="emoji-auto-complete-container w-100 hidden"
+                                data-region="emoji-auto-complete-container"
+                                aria-live="polite"
+                                aria-hidden="true"
+                            >
+                            </div>
+                        <div class="d-flex mt-sm-1">
+                            <textarea
+                                dir="auto"
+                                data-region="send-message-txt"
+                                class="form-control bg-light"
+                                rows="3"
+                                data-auto-rows
+                                data-min-rows="3"
+                                data-max-rows="5"
+                                aria-label="Scrivi messaggio"
+                                placeholder="Scrivi messaggio"
+                                style="resize: none"
+                                maxlength="4096"
+                            ></textarea>
+                        
+                            <div class="position-relative d-flex flex-column">
+                                    <div
+                                        data-region="emoji-picker-container"
+                                        class="emoji-picker-container hidden"
+                                        aria-hidden="true"
+                                    >
+                                        
+                                        <div
+                                            data-region="emoji-picker"
+                                            class="card shadow emoji-picker"
+                                        >
+                                            <div class="card-header px-1 pt-1 pb-0 d-flex justify-content-between flex-shrink-0">
+                                                <button
+                                                    class="btn btn-outline-secondary icon-no-margin category-button selected"
+                                                    data-action="show-category"
+                                                    data-category="Recent"
+                                                    title="Recenti"
+                                                >
+                                                    <i class="icon fa fa-clock-o fa-fw " aria-hidden="true"  ></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-outline-secondary icon-no-margin category-button"
+                                                    data-action="show-category"
+                                                    data-category="Smileys & Emotion"
+                                                    title="Sorrisi & emozione"
+                                                >
+                                                    <i class="icon fa fa-smile-o fa-fw " aria-hidden="true"  ></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-outline-secondary icon-no-margin category-button"
+                                                    data-action="show-category"
+                                                    data-category="People & Body"
+                                                    title="Persone & corpo"
+                                                >
+                                                    <i class="icon fa fa-male fa-fw " aria-hidden="true"  ></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-outline-secondary icon-no-margin category-button"
+                                                    data-action="show-category"
+                                                    data-category="Animals & Nature"
+                                                    title="Animali & natura"
+                                                >
+                                                    <i class="icon fa fa-leaf fa-fw " aria-hidden="true"  ></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-outline-secondary icon-no-margin category-button"
+                                                    data-action="show-category"
+                                                    data-category="Food & Drink"
+                                                    title="Cibo & bevande"
+                                                >
+                                                    <i class="icon fa fa-cutlery fa-fw " aria-hidden="true"  ></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-outline-secondary icon-no-margin category-button"
+                                                    data-action="show-category"
+                                                    data-category="Travel & Places"
+                                                    title="Viaggi & luoghi"
+                                                >
+                                                    <i class="icon fa fa-plane fa-fw " aria-hidden="true"  ></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-outline-secondary icon-no-margin category-button"
+                                                    data-action="show-category"
+                                                    data-category="Activities"
+                                                    title="Attività"
+                                                >
+                                                    <i class="icon fa fa-futbol-o fa-fw " aria-hidden="true"  ></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-outline-secondary icon-no-margin category-button"
+                                                    data-action="show-category"
+                                                    data-category="Objects"
+                                                    title="Oggetti"
+                                                >
+                                                    <i class="icon fa fa-lightbulb-o fa-fw " aria-hidden="true"  ></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-outline-secondary icon-no-margin category-button"
+                                                    data-action="show-category"
+                                                    data-category="Symbols"
+                                                    title="Simboli"
+                                                >
+                                                    <i class="icon fa fa-heart fa-fw " aria-hidden="true"  ></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-outline-secondary icon-no-margin category-button"
+                                                    data-action="show-category"
+                                                    data-category="Flags"
+                                                    title="Bandiere"
+                                                >
+                                                    <i class="icon fa fa-flag fa-fw " aria-hidden="true"  ></i>
+                                                </button>
+                                            </div>
+                                            <div class="card-body p-2 d-flex flex-column overflow-hidden">
+                                                <div class="input-group mb-1 flex-shrink-0">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text pr-0 bg-white text-muted">
+                                                            <i class="icon fa fa-search fa-fw " aria-hidden="true"  ></i>
+                                                        </span>
+                                                    </div>
+                                                    <input
+                                                        type="text"
+                                                        class="form-control border-left-0"
+                                                        placeholder="Cerca"
+                                                        aria-label="Cerca"
+                                                        data-region="search-input"
+                                                    >
+                                                </div>
+                                                <div class="flex-grow-1 overflow-auto emojis-container h-100" data-region="emojis-container">
+                                                    <div class="position-relative" data-region="row-container"></div>
+                                                </div>
+                                                <div class="flex-grow-1 overflow-auto search-results-container h-100 hidden" data-region="search-results-container">
+                                                    <div class="position-relative" data-region="row-container"></div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="card-footer d-flex flex-shrink-0"
+                                                data-region="footer"
+                                            >
+                                                <div class="emoji-preview" data-region="emoji-preview"></div>
+                                                <div data-region="emoji-short-name" class="emoji-short-name text-muted text-wrap ml-2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="btn btn-link btn-icon icon-size-3 ml-1"
+                                        aria-label="Attiva/DIsattiva il selettore degli emoji"
+                                        data-action="toggle-emoji-picker"
+                                    >
+                                        <i class="icon fa fa-smile-o fa-fw " aria-hidden="true"  ></i>
+                                    </button>
+                                <button
+                                    class="btn btn-link btn-icon icon-size-3 ml-1 mt-auto"
+                                    aria-label="Invia messaggio"
+                                    data-action="send-message"
+                                >
+                                    <span data-region="send-icon-container"><i class="icon fa fa-paper-plane fa-fw " aria-hidden="true"  ></i></span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden p-sm-2" data-region="content-messages-footer-edit-mode-container">
+                        
+                        <div class="d-flex p-3">
+                            <button
+                                class="btn btn-link btn-icon my-1 icon-size-4 ml-auto"
+                                data-action="delete-selected-messages"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="Elimina messaggi selezionati"
+                            >
+                                <span data-region="icon-container"><i class="icon fa fa-trash fa-fw " aria-hidden="true"  ></i></span>
+                                <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</span>
+                                <span class="sr-only">Elimina messaggi selezionati</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hidden bg-secondary p-sm-3" data-region="content-messages-footer-require-contact-container">
+                        
+                        <div class="p-3 bg-white">
+                            <p data-region="title"></p>
+                            <p class="text-muted" data-region="text"></p>
+                            <button type="button" class="btn btn-primary btn-block" data-action="request-add-contact">
+                                <span data-region="dialogue-button-text">Invia richiesta di contatto</span>
+                                <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hidden bg-secondary p-sm-3" data-region="content-messages-footer-require-unblock-container">
+                        
+                        <div class="p-3 bg-white">
+                            <p class="text-muted" data-region="text">Hai bloccato l'utente.</p>
+                            <button type="button" class="btn btn-primary btn-block" data-action="request-unblock">
+                                <span data-region="dialogue-button-text">Sblocca utente</span>
+                                <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Caricamento in corso" role="img" aria-label="Caricamento in corso"></i></span>
+</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hidden bg-secondary p-sm-3" data-region="content-messages-footer-unable-to-message">
+                        
+                        <div class="p-3 bg-white">
+                            <p class="text-muted" data-region="text">Non puoi inviare messaggi a questo utente</p>
+                        </div>
+                    </div>
+                    <div class="p-sm-2" data-region="placeholder-container">
+                        <div class="d-flex">
+                            <div class="bg-pulse-grey w-100" style="height: 80px"></div>
+                            <div class="mx-2 mb-2 align-self-end bg-pulse-grey" style="height: 20px; width: 20px"></div>
+                        </div>                    </div>
+                    <div
+                        class="hidden position-absolute z-index-1"
+                        data-region="confirm-dialogue-container"
+                        style="top: -1px; bottom: 0; right: 0; left: 0; background: rgba(0,0,0,0.3);"
+                    ></div>
+                </div>                    <div data-region="view-overview" class="text-center">
+                        <a href="https://informatica.i-learn.unito.it/message/index.php">
+                            Visualizza tutto
+                        </a>
+                    </div>
+            </div>
+        </div>
+
+</div>	<footer id="page-footer" class="container-fluid">
+			<div class="row-fluid">
+		<aside id="block-region-footer-left" class="span4 block-region" data-blockregion="footer-left" data-droptarget="1"></aside><aside id="block-region-footer-middle" class="span4 block-region" data-blockregion="footer-middle" data-droptarget="1"></aside><aside id="block-region-footer-right" class="span4 block-region" data-blockregion="footer-right" data-droptarget="1"></aside> 	</div>
+
+	<div class="footerlinks">
+    	<div class="row-fluid">
+    		<p class="helplink"></p>
+    				</div>
+        
+            		
+    	        
+   	</div>
+<div class='ilearnfooter' style='color:#000 !important;'>
+		Servizio realizzato presso il <a href="http://www.di.unito.it"><img style='height:24px;' src="https://informatica.i-learn.unito.it/theme/image.php/lambda/theme/1692604098/sictlogo" alt="Servizi ICT">  Dipartimento di Informatica - Servizi ICT</a> - Page Served By Apollo1    		<br />
+ 		<p>
+    	<a href="http://validator.w3.org/check?uri=referer"><img src="https://informatica.i-learn.unito.it/theme/image.php/lambda/theme/1692604098/valid-html5" height="31" width="88" /></a>
+ 		<a href="http://www.easyreading.it"><img src="https://informatica.i-learn.unito.it/theme/image.php/lambda/theme/1692604098/LOGO-2016-EasyReading-Font" alt="EasyReading Logo" height="31" /></a>
+
+  		</p>
+	</div>
+<div class="logininfo">Sei collegato come <a href="https://informatica.i-learn.unito.it/user/profile.php?id=22914" title="Visualizza">Guanti Filippo</a>. (<a href="https://informatica.i-learn.unito.it/login/logout.php?sesskey=uoLK1vDyh8">Esci</a>)</div>	</footer>
+</div>
+<script>(function($) {
+ 	$(document).ready(function(){
+
+	var offset = 220;
+    var duration = 500;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.back-to-top').fadeIn(duration);
+        } else {
+            jQuery('.back-to-top').fadeOut(duration);
+        }
+	});
+	jQuery('.back-to-top').click(function(event) {
+    	event.preventDefault();
+    	jQuery('html, body').animate({scrollTop: 0}, duration);
+    	return false;
+	});
+	
+	$(document).on('click', 'button[data-toggle="dropdown"], .action-menu a[data-toggle="dropdown"], .lambda-custom-menu .nav-collapse.in a[data-toggle="dropdown"], .ml-auto.dropdown a[data-toggle="dropdown"]', function(event) {
+		event.preventDefault();
+  		$(this).next('.dropdown-menu').slideToggle("fast");
+	});
+	$(document).on('click', function (e) {
+    	if(!$('button[data-toggle="dropdown"]').is(e.target) && !$('button[data-toggle="dropdown"]').has(e.target).length && !$('a[data-toggle="dropdown"]').is(e.target) && !$('a[data-toggle="dropdown"]').has(e.target).length && !$(".atto_hasmenu").is(e.target)){
+        	$('.dropdown .dropdown-menu:not(.lambda-login)').slideUp("fast");
+    	}                       
+	});
+	$(document).on('click', '.modchooser button[data-action="show-option-summary"], .modchooser button.closeoptionsummary', function(event) {
+		$('.carousel-item[data-region="modules"]').toggleClass("active");
+		$('.carousel-item[data-region="help"]').toggleClass("active");
+	});
+
+	});
+}) (jQuery);
+
+
+var togglesidebar = function() {
+  var sidebar_open = Y.one('body').hasClass('sidebar-open');
+  if (sidebar_open) {
+    Y.one('body').removeClass('sidebar-open');
+    M.util.set_user_preference('theme_lambda_sidebar', 'sidebar-closed');
+  } else {
+    Y.one('body').addClass('sidebar-open');
+    M.util.set_user_preference('theme_lambda_sidebar', 'sidebar-open');
+  }
+};
+
+M.theme_lambda = M.theme_lambda || {};
+M.theme_lambda.sidebar =  {
+  init: function() {
+    Y.one('body').delegate('click', togglesidebar, '#sidebar-btn');
+  }
+};</script><script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://informatica.i-learn.unito.it/lib/requirejs.php/1692604098/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://informatica.i-learn.unito.it/lib/javascript.php/1692604098/lib/jquery/jquery-3.5.1.min',
+        jqueryui: 'https://informatica.i-learn.unito.it/lib/javascript.php/1692604098/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://informatica.i-learn.unito.it/lib/javascript.php/1692604098/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://informatica.i-learn.unito.it/lib/javascript.php/1692604098/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('it');
+});;
+function legacy_activity_onclick_handler_1(e) { e.halt(); window.open('https://informatica.i-learn.unito.it/mod/resource/view.php?id=1382&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_2(e) { e.halt(); window.open('https://informatica.i-learn.unito.it/mod/resource/view.php?id=1785&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_3(e) { e.halt(); window.open('https://informatica.i-learn.unito.it/mod/resource/view.php?id=2394&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_4(e) { e.halt(); window.open('https://informatica.i-learn.unito.it/mod/resource/view.php?id=2395&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_5(e) { e.halt(); window.open('https://informatica.i-learn.unito.it/mod/resource/view.php?id=12857&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_6(e) { e.halt(); window.open('https://informatica.i-learn.unito.it/mod/resource/view.php?id=12859&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+M.util.js_pending('block_navigation/navblock'); require(['block_navigation/navblock'], function(amd) {amd.init("20425"); M.util.js_complete('block_navigation/navblock');});;
+M.util.js_pending('tool_usertours/usertours'); require(['tool_usertours/usertours'], function(amd) {amd.init([{"tourId":"12","startTour":false,"filtervalues":{"cssselector":{"0":"[data-region=activity-information]"}}}], ["cssselector"]); M.util.js_complete('tool_usertours/usertours');});;
+M.util.js_pending('block_settings/settingsblock'); require(['block_settings/settingsblock'], function(amd) {amd.init("20426", null); M.util.js_complete('block_settings/settingsblock');});;
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+require(
+[
+    'jquery',
+    'core_message/message_popover'
+],
+function(
+    $,
+    Popover
+) {
+    var toggle = $('#message-drawer-toggle-64f8700e5a99564f8700e5239e43');
+    Popover.init(toggle);
+});
+;
+
+require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
+    CustomEvents.define('#single_select64f8700e5239e53', [CustomEvents.events.accessibleChange]);
+    $('#single_select64f8700e5239e53').on(CustomEvents.events.accessibleChange, function() {
+        var ignore = $(this).find(':selected').attr('data-ignore');
+        if (typeof ignore === typeof undefined) {
+            $('#single_select_f64f8700e5239e52').submit();
+        }
+    });
+});
+;
+
+        require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
+            CustomEvents.define('#jump-to-activity', [CustomEvents.events.accessibleChange]);
+            $('#jump-to-activity').on(CustomEvents.events.accessibleChange, function() {
+                if (!$(this).val()) {
+                    return false;
+                }
+                $('#url_select_f64f8700e5239e54').submit();
+            });
+        });
+    ;
+
+require(
+[
+    'jquery',
+    'core_message/message_drawer',
+    'core_message/message_popover'
+],
+function(
+    $,
+    MessageDrawer,
+    Popover
+) {
+
+    var root = $('#message-drawer-64f8700e5eb1764f8700e5239e55');
+    MessageDrawer.init(root);
+
+    var toggle = $('#message-drawer-close-64f8700e5eb1764f8700e5239e55');
+    Popover.init(toggle);
+});
+;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://informatica.i-learn.unito.it/theme/javascript.php/lambda/1692604098/footer"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Ultime modifiche","name":"Nome","error":"Errore","info":"Informazioni","yes":"S\u00ec","no":"No","viewallcourses":"Visualizza tutti i corsi","cancel":"Annulla","morehelp":"Aiuto ulteriore","loadinghelp":"Caricamento in corso...","confirm":"Conferma","areyousure":"Sei sicuro?","closebuttontitle":"Chiudi","unknownerror":"Errore sconosciuto","file":"File","url":"URL","collapseall":"Minimizza tutto","expandall":"Espandi tutto"},"repository":{"type":"Tipo","size":"Dimensione","invalidjson":"Stringa JSON non valida","nofilesattached":"Non sono presenti file allegati","filepicker":"File picker","logout":"Logout","nofilesavailable":"Non sono presenti file","norepositoriesavailable":"Spiacente, nessuno dei repostory disponibili pu\u00f2 restituire file nel formato richiesto.","fileexistsdialogheader":"Il file esiste gi\u00e0","fileexistsdialog_editor":"Un file con lo stesso nome \u00e8 gi\u00e0 stato allegato al testo che stai modificando.","fileexistsdialog_filemanager":"Un file con lo stesso nome \u00e8 gi\u00e0 stato allegato","renameto":"Rinomina in \"{$a}\"","referencesexist":"Sono presenti {$a} link a questo file","select":"Scegli"},"admin":{"confirmdeletecomments":"Stai per eliminare commenti, sei sicuro ?","confirmation":"Conferma"},"debug":{"debuginfo":"Informazioni di debug","line":"Linea","stacktrace":"Stack trace"},"langconfig":{"labelsep":":\u00a0"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"it"});
+});
+M.util.help_popups.setup(Y);
+Y.use("moodle-core-popuphelp",function() {M.core.init_popuphelp();
+});
+ M.util.js_pending('random64f8700e5239e56'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random64f8700e5239e56'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>
