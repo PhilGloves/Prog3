@@ -3,7 +3,7 @@
 .login-view {
     -fx-background-color:
             linear-gradient(to bottom right,
-            rgb(250, 187, 109) 0%,
+            rgb(150, 120, 109) 0%,
             rgb(170, 207, 227) 100%);
 }
 .login-card{

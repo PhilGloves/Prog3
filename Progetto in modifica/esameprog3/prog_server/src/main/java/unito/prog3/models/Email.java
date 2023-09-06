@@ -16,7 +16,7 @@ public class Email implements Serializable {
 
   private boolean isRead;
 
-
+  private static final long serialVersionUID = 3245324532L;
   private Email replyTo;
 
   // Constructor

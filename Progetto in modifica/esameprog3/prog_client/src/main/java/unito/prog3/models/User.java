@@ -8,7 +8,7 @@ public class User implements Serializable {
 
   private String username;
   private String password;
-
+  private static final long serialVersionUID = 3245324532L;
 
   public User() {
     this(null,null);

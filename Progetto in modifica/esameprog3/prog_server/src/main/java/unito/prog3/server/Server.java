@@ -286,6 +286,7 @@ public class Server implements Runnable {
         response(Connection.OK);
         writeLog("- "+actual.getUsername()+"'s email sent ");
       } catch (IllegalAccessException | ClassNotFoundException e) {
+        System.out.println(e.getMessage());
         response(Connection.FAIL);
         writeLog("- "+actual.getUsername()+"'s email not sent ");
       }

@@ -1,1 +1,8 @@
-[{"username":"samu@prog.com","password":"samu"},{"username":"filippo@prog.com","password":"filippo"},{"username":"genoveffa@prog.com","password":"genoveffa"},{"username":"mariorossi@prog.com","password":"mario"},{"username":"fabio@prog.com","password":"fabio"},{"username":"domenico@prog.com","password":"domenico"},{"username":"pietro@prog.com","password":"pietro"},{"username":"carlo@prog.com","password":"carlo"}]
+[{"username":"samu@prog.com","password":"samu"},
+  {"username":"filippo@prog.com","password":"filippo"},
+  {"username":"genoveffa@prog.com","password":"genoveffa"},
+  {"username":"mario@prog.com","password":"mario"},
+  {"username":"fabio@prog.com","password":"fabio"},
+  {"username":"domenico@prog.com","password":"domenico"},
+  {"username":"pietro@prog.com","password":"pietro"},
+  {"username":"carlo@prog.com","password":"carlo"}]
