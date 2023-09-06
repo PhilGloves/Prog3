@@ -14,7 +14,7 @@ public enum Connection implements Serializable {
   DELETE,
   DELETEREPLY,
   READ,
-  REPLY,
+  REPLAY,
 
 
   OK,

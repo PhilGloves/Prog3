@@ -51,7 +51,7 @@ public class ControllerMain {
 
   //left
   @FXML
-  private Label username;  //example: username@prog.com
+  private Label username;  //example: username@prova.com
 
   //middle view
   @FXML
@@ -351,7 +351,7 @@ public class ControllerMain {
     String to[]    = tos.split(",");
     for (var singleTo:
          to) {
-      if(!singleTo.endsWith("@prog.com") ||
+      if(!singleTo.endsWith("@prova.com") ||
               singleTo.split("@").length>2)
       {
         errorMsg.setText("Incorrect emails");
@@ -379,7 +379,7 @@ public class ControllerMain {
       errorMsg.setText("Some email doesnt exist");
   }
   private void sendReply(Email email) throws IOException, ClassNotFoundException {
-    if(client.reply(email).equals(Connection.OK))
+    if(client.replay(email).equals(Connection.OK))
       hideViewNew();
     else
       errorMsg.setText("Some email doesnt exist");

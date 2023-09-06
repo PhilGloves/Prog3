@@ -79,13 +79,13 @@ public final class Client {
 
   public void forward(){}
 
-  public void reply() throws IOException {
-    System.out.println("reply");
-    output.writeObject(Connection.REPLY);
+  public void replay() throws IOException {
+    System.out.println("replay");
+    output.writeObject(Connection.REPLAY);
   }
-  public Connection reply(Email email) throws IOException, ClassNotFoundException {
-    System.out.println("reply");
-    output.writeObject(Connection.REPLY);
+  public Connection replay(Email email) throws IOException, ClassNotFoundException {
+    System.out.println("replay");
+    output.writeObject(Connection.REPLAY);
     output.writeObject(email);
 
     return response();

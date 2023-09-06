@@ -187,7 +187,7 @@ public class FileHandler {
             json, k-> new ReentrantLock()
     )){
       emails = readEmails(json);
-      emails.get(emails.indexOf(email)).setRead(true);
+      emails.get(emails.indexOf(email)).setReaded(true);
       writeEmails(json, emails);
     }
   }

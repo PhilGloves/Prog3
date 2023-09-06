@@ -90,7 +90,7 @@ public class Server implements Runnable {
 
     @Override
     public void run() {
-      System.out.println("Nuovo Thread");
+      System.out.println("nuovo Thread");
       Object read;
       while (connected){
         read = null;
@@ -149,8 +149,8 @@ public class Server implements Runnable {
         case READ -> {
           read();
         }
-        case REPLY -> {
-          reply();
+        case REPLAY -> {
+          replay();
         }
       }
     }
@@ -177,8 +177,8 @@ public class Server implements Runnable {
 
 
     /** REQUESTS */
-    private void reply() throws IOException {
-      System.out.println("reply");
+    private void replay() throws IOException {
+      System.out.println("replay");
       try {
         Email email = receiveEmail();
         writeLog("- "+actual.getUsername()+" try reply to: "+
@@ -191,7 +191,7 @@ public class Server implements Runnable {
 
         email.setId(FileHandler.incrementID());
         // mine
-        email.setRead(true);
+        email.setReaded(true);
         FileHandler.insertReplyEmail(actual.simpleUsername(),
                 SENT,
                 email);
@@ -199,7 +199,7 @@ public class Server implements Runnable {
                 INBOX,
                 email);
         // other
-        email.setRead(false);
+        email.setReaded(false);
         for (String mail:
                 email.getTo()) {
           FileHandler.insertReplyEmail(
@@ -213,10 +213,10 @@ public class Server implements Runnable {
                 SENT,
                 email);
         response(Connection.OK);
-        writeLog("- "+actual.getUsername()+"'s email replied ");
+        writeLog("- "+actual.getUsername()+"'s email replyed ");
       } catch (IllegalAccessException | ClassNotFoundException e) {
         response(Connection.FAIL);
-        writeLog("- "+actual.getUsername()+"'s email not replied ");
+        writeLog("- "+actual.getUsername()+"'s email not replyed ");
       }
     }
 
@@ -284,11 +284,10 @@ public class Server implements Runnable {
           );
         }
         response(Connection.OK);
-        writeLog("- "+actual.getUsername()+"'s email sent ");
+        writeLog("- "+actual.getUsername()+"'s email sended ");
       } catch (IllegalAccessException | ClassNotFoundException e) {
-        System.out.println(e.getMessage());
         response(Connection.FAIL);
-        writeLog("- "+actual.getUsername()+"'s email not sent ");
+        writeLog("- "+actual.getUsername()+"'s email not sended ");
       }
     }
     private void box(Connection req) throws IOException {
