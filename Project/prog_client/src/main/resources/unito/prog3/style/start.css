@@ -3,8 +3,8 @@
 .login-view {
     -fx-background-color:
             linear-gradient(to bottom right,
-            rgb(150, 120, 109) 0%,
-            rgb(170, 207, 227) 100%);
+            rgb(45, 37, 156) 0%,
+            rgb(255, 255, 255) 100%);
 }
 .login-card{
     -fx-background-radius: 10%;
@@ -21,13 +21,13 @@
     -fx-font-famil: Calibri;
     -fx-text-fill:
             linear-gradient(to right bottom,
-            rgb(149, 198, 255) 0%,
-                rgb(253, 188, 98) 100%);
+            rgb(45, 37, 156) 0%,
+            rgb(255, 255, 255) 100%);
     -fx-font-weight: bold;
 }
 .login-error {
     -fx-font-family: Arial;
-    -fx-text-fill: red;
+    -fx-text-fill: #a1150f;
     -fx-font-weight: bold;
 }
 

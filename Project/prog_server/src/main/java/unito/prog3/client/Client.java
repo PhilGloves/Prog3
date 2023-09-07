@@ -10,33 +10,21 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.List;
 
-public final class Client {
-  private User user; //
+public class Client {
+  private User user;
   private static String URL = "127.0.0.1";
-  private static int PORT = 1998;//presenti nel file conf.json lato server
+  private static int PORT = 1998;
 
   private Socket server;
   private ObjectInputStream input;
   private ObjectOutputStream output;
 
-  private static Client INSTANCE;
+  public Client() throws IOException {
 
-  private Client() throws IOException {
-    Connect();
-  }
-
-  private void Connect() throws IOException {
     server = new Socket(URL,PORT);
 
     input = new ObjectInputStream(server.getInputStream());
     output = new ObjectOutputStream(server.getOutputStream());
-  }
-  public static Client getInstance() throws IOException {
-    if(INSTANCE == null)
-    {
-      INSTANCE = new Client();
-    }
-    return INSTANCE;
   }
 
   public void setUser(User user) {
@@ -111,19 +99,6 @@ public final class Client {
     return response();
   }
 
-  public Connection deleteReply(Email email, String box, Integer id) throws IOException, ClassNotFoundException {
-    System.out.println("delete");
-    output.writeObject(Connection.DELETEREPLY);
-    output.writeObject(email);
-    output.writeObject(id);
-    output.writeObject(
-            box.equalsIgnoreCase("inbox")
-                    ? Connection.INBOX
-                    : Connection.SENTBOX);
-
-    return response();
-  }
-
   public Connection send(Email email) throws IOException, ClassNotFoundException {
     System.out.println("send");
     email.setFrom(user.getUsername());
@@ -135,14 +110,14 @@ public final class Client {
   public List<Email> box(String box) throws IOException, ClassNotFoundException {
     System.out.println("box");
     output.writeObject(
-            box.equalsIgnoreCase("inbox")
-                    ? Connection.INBOX
-                    : Connection.SENTBOX);
+      box.equalsIgnoreCase("inbox")
+            ? Connection.INBOX
+            : Connection.SENTBOX);
 
     List<Email> emails =
             response().equals(Connection.OK)
-                    ? (List<Email>) input.readObject()
-                    :null;
+            ? (List<Email>) input.readObject()
+            :null;
 
     return emails;
   }
@@ -158,18 +133,11 @@ public final class Client {
 
   public Connection login(User user) throws IOException, IllegalAccessException, ClassNotFoundException {
     System.out.println("login");
-    isNull(user); //controlla che l'user non sia nullo altrimenti lancia un eccezione
-    setUser(user);
-    output.writeObject(Connection.LOGIN); //scrive nel buffer della socket
+    isNull(user);
+
+    output.writeObject(Connection.LOGIN);
     sendUser(user);
     return response();
   }
 
-
-  public void riConnect() throws IOException, ClassNotFoundException, IllegalAccessException {
-    Connect();
-    login(user);
-  }
-
 }
-

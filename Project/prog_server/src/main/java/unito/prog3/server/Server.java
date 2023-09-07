@@ -1,5 +1,5 @@
 package unito.prog3.server;
-//Le mie classi
+
 import unito.prog3.controller.Controller;
 import unito.prog3.file.FileHandler;
 import unito.prog3.models.Email;
@@ -16,47 +16,49 @@ import java.util.List;
 
 public class Server implements Runnable {
 
-  // Dichiarazione di variabili e oggetti per il server
   private final ServerSocket server;
   private List<User> users;
   private Controller controller;
 
-  // Costruttore del Server
   private Server() throws IllegalAccessException, IOException {
     String key = "Port";
-    int port = (int) FileHandler.getConfiguration().get(key);
+    int port = (int) FileHandler.getConfiguration().get(key); //legge dal file conf.json e imposta la porta
     this.server = new ServerSocket(port);
     this.users = FileHandler.getUsers();
   }
 
-  // Costruttore del Server che accetta un Controller
   public Server(Controller controller) throws IllegalAccessException, IOException {
-    this(); // Chiama il costruttore senza argomenti per inizializzare il server
-    this.controller = controller;
+    this();
+    this.controller=controller;
   }
 
-  // Metodo per verificare se un utente è presente nella lista degli utenti registrati
-  private synchronized boolean containUser(User user) {
+  //synchro on object server
+  private synchronized void addUser(User user) throws IOException, IllegalAccessException {
+    if(!users.contains(user)){
+      users.add(user);
+      FileHandler.addUser(user);
+    }
+  }
+  private synchronized boolean containUser(User user){
     return users.contains(user);
   }
-
-  // Metodo per ottenere un utente dalla lista degli utenti registrati
-  private synchronized User getUser(User user) {
+  private synchronized User getUser(User user){
     return users.get(users.indexOf(user));
   }
 
-  // Metodo per scrivere un messaggio di log tramite il controller
-  private void writeLog(String text) {
-    synchronized (controller) {
+  //synchro on object controller
+  private void writeLog(String text){
+    synchronized (controller){
       controller.writeLog(text);
     }
   }
 
   @Override
   public void run() {
-    Thread.currentThread().setName("Server");
-    writeLog("Server Online");
-    while (true) {
+    Thread.currentThread().setName("Sever");
+    writeLog("Server UP!!");
+    while (true){
+
       try {
         Socket client = server.accept();
         new Thread(new ClientHandle(client)).start();
@@ -125,6 +127,9 @@ public class Server implements Runnable {
       switch (req){
         case LOGIN -> {
           login();
+        }
+        case REGISTRATION -> {
+          registration();
         }
         case INBOX -> {
           box(Connection.INBOX);
@@ -297,6 +302,31 @@ public class Server implements Runnable {
                 box
         ));
       } catch (IOException | IllegalAccessException e) {
+        response(Connection.FAIL);
+      }
+    }
+
+    private void registration() throws IOException {
+      System.out.println("registration");
+      User userRec;
+      try {
+        userRec = receiveUser();
+        if(containUser(userRec)){
+          response(Connection.FAIL);
+          return;
+        }
+
+        try {
+          addUser(userRec);
+        }
+        catch (IllegalAccessException | IOException e) {
+          // File problems
+          throw new RuntimeException(e);
+        }
+
+        actual = userRec;
+        response(Connection.OK);
+      }catch (ClassNotFoundException e) {
         response(Connection.FAIL);
       }
     }
