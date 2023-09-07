@@ -75,7 +75,11 @@ L'interfaccia utente deve essere:
 - Cancellare tutte le cartelle degli utenti presenti (che contengono ognuno i file `inbox` e `sent`) e le rimpiazzo con i nuovi utenti creati.
 - Provo ad aprire e se funziona mando qualche mail in giro.
 
-### Altri Cambiamenti
+### Aggiunta commenti in `prog_client/`
 
+
+### Altri Cambiamenti
+- Da cancellare (forse) metodi a righe 79 e 90 e 248 (registrazione che faceva da terminale Bad) del FileHandler.Java<prog_server
+- Da cambiare icone in resources>icons e "server-view.fxml"
 - Dovrei cambiare anche il `conf.json` con ip e porte diverse?
 - Tolgo qualche metodo che non è stato utilizzato o non è necessario per il progetto, come i metodi per la registrazione che non sono stati utilizzati in un po' di classi (da fare).

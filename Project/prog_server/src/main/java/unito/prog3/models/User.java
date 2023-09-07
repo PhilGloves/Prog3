@@ -7,7 +7,7 @@ public class User implements Serializable {
 
   private String username;
   private String password;
-  private static final long serialVersionUID = 3245324532L;
+  private static final long serialVersionUID = 3245324532L; //used during deserialization to verify that the sender and receiver of a serialized object have loaded classes for that object that are compatible with respect to serialization. If the receiver has loaded a class for the object that has a different serialVersionUID than that of the corresponding sender's class, then deserialization will result in an InvalidClassException
 
   public User() {
     this(null,null);
