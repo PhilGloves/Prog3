@@ -27,11 +27,7 @@
 .left-section-container {
     -fx-background-color: linear-gradient(to bottom left, #00416a 0%, #C0C0C0 100%);
 }
-.left-section-user {
-    -fx-border-style: hidden hidden solid hidden;
-    -fx-border-color: #6c6c6c;
-    -fx-border-width: 1px;
-}
+
 .left-section-item {
     -fx-background: #00416a;
     -fx-font-size: 1.6em;
@@ -42,27 +38,27 @@
     -fx-text-fill: #ebfafa;
 }
 .left-section-item:hover {
-    -fx-background-color: rgba(77, 77, 77, 0.99);
+    -fx-background-color: #C0C0C0;
+}
+.mail-view-head{
+    -fx-background-color: #C0C0C0;
 }
 
 /*========================================================*/
 /* mid Section */
 .mid-section {
     -fx-padding: 5;
-    -fx-border-style: hidden solid hidden hidden;
-    -fx-border-color: #E4E4E6;
-
 }
 .mid-section-title {
     -fx-font-size: 2.4em;
     -fx-font-weight: bold;
     -fx-font-family: Candara;
-    -fx-text-fill: #d2c2ae;
+    -fx-text-fill: #fff;
 }
 .mid-section-n {
     -fx-font-size: 1.3em;
     -fx-font-weight: bold;
-    -fx-text-fill: #ad9f8f;
+    -fx-text-fill: #fff;
     -fx-background: #00416a;
     -fx-font-family: Candara;
 }
@@ -75,13 +71,33 @@
     -fx-padding: 0 0 0 25px; /* Aggiungi spazio a sinistra dell'immagine per l'icona */
 }
 
-.pencil-icon {
-    -fx-background-image: url('../icons/edit.png');
+.sent-icon{
+    -fx-background-image: url('../icons/sent.png');
     -fx-background-repeat: no-repeat;
     -fx-background-size: 20px 20px; /* Imposta le dimensioni dell'immagine */
     -fx-padding: 0 0 0 25px; /* Aggiungi spazio a sinistra dell'immagine per l'icona */
 }
 
+.inbox-icon{
+    -fx-background-image: url('../icons/inbox.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 20px 20px; /* Imposta le dimensioni dell'immagine */
+    -fx-padding: 0 0 0 25px; /* Aggiungi spazio a sinistra dell'immagine per l'icona */
+}
+
+.pencil-icon {
+    -fx-background-image: url('../icons/pencil.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 20px 20px; /* Imposta le dimensioni dell'immagine */
+    -fx-padding: 0 0 0 25px; /* Aggiungi spazio a sinistra dell'immagine per l'icona */
+}
+
+.user-icon {
+    -fx-background-image: url('../icons/user.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 20px 20px; /* Imposta le dimensioni dell'immagine */
+    -fx-padding: 0 0 0 25px; /* Aggiungi spazio a sinistra dell'immagine per l'icona */
+}
 
 /*========================================================*/
 /* Mail List */
@@ -145,10 +161,6 @@
 /*========================================================*/
 /* EMAIL VIEW */
 
-/* mail-view-head */
-mail-view-head {
-    -fx-background-color: red;
-}
 
 .user-title{
     -fx-font-size: 2.4em;
