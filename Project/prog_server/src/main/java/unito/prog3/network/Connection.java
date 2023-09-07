@@ -10,7 +10,6 @@ public enum Connection implements Serializable {
   LOGIN,
   OK,
   READ,
-  REGISTRATION,
   REPLY,
   SEND,
   SENTBOX
