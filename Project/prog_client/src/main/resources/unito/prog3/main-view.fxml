@@ -102,7 +102,7 @@
                            <children>
                                         <HBox fx:id="box_new" alignment="CENTER_LEFT" onMouseClicked="#showViewNewMail" prefHeight="50.0" prefWidth="200.0" spacing="10.0" styleClass="left-section-item">
                                             <children>
-                                                <Label style="-fx-font-size: 30; -fx-fill: #9bbde0;" styleClass="new-icon" text="PENCIL_SQUARE_ALT">
+                                                <Label styleClass="pencil-icon" >
                                                     <HBox.margin>
                                                         <Insets left="10.0" />
                                                     </HBox.margin>
@@ -194,7 +194,7 @@
                                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                                     </VBox.margin>
                                     <children>
-                                        <Label style="-fx-font-size: 20;" styleClass="back-icon" text="&lt;">
+                                        <Label style="-fx-font-size: 20;" fx:id="backButton" onMouseClicked="#hideViewNew" styleClass="back-icon" text="&lt;">
                                             <cursor>
                                                 <Cursor fx:constant="HAND" />
                                             </cursor>
@@ -203,7 +203,7 @@
                                             <children>
                                                 <Label fx:id="errorMsg" layoutY="10.0" prefHeight="24.0" prefWidth="279.0" styleClass="error-message" AnchorPane.leftAnchor="0.0" />
                                                 <Label fx:id="title_new" layoutX="200.0" layoutY="10.0" prefHeight="24.0" prefWidth="139.0" styleClass="new-mail-title" text="NEW MAIL" AnchorPane.leftAnchor="300.0" />
-                                                <Label style="-fx-font-size: 20;" styleClass="send-icon" text="SEND" AnchorPane.rightAnchor="0.0">
+                                                <Label style="-fx-font-size: 20;"  styleClass="send-icon" AnchorPane.rightAnchor="0.0">
                                                     <cursor>
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
