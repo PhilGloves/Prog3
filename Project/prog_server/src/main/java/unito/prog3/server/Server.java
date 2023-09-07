@@ -35,14 +35,6 @@ public class Server implements Runnable {
     this.controller = controller;
   }
 
-  // Metodo per aggiungere un utente alla lista degli utenti registrati
-  private synchronized void addUser(User user) throws IOException, IllegalAccessException {
-    if (!users.contains(user)) {
-      users.add(user);
-      FileHandler.addUser(user);
-    }
-  }
-
   // Metodo per verificare se un utente è presente nella lista degli utenti registrati
   private synchronized boolean containUser(User user) {
     return users.contains(user);
