@@ -2,7 +2,6 @@ package unito.prog3;
 
 
 // Classi di java fx
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
