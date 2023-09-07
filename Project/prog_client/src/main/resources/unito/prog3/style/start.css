@@ -12,9 +12,9 @@
 
 
 .login-card {
-    -fx-background-radius: 4px;
+    -fx-background-radius: 18px;
     -fx-background-color: #C0C0C0;
-    -fx-padding: 20px;
+    /*-fx-padding: 20px;*/
     -fx-max-width: 400px;
     -fx-translate-x: 50px;
     -fx-translate-y: 50px;
@@ -38,15 +38,13 @@ login-title{
     -fx-prompt-text-fill: #999999; /* Grigio medio */
     -fx-font-size: 16px;
     -fx-background-color: #f5f5f5; /* Grigio chiaro */
-    -fx-background-radius: 5px;
-    -fx-border-width: 2px;
-    -fx-border-color: #ccc;
-    -fx-padding: 10px;
+    -fx-background-radius: 18px;
+    -fx-padding: 6px;
 }
 
 .login-btn {
-    -fx-background-color: #00416a; /* Verde */
-    -fx-text-fill: #fff; /* Bianco */
+    -fx-background-color: #00416a;
+    -fx-text-fill: #fff;
     -fx-min-width: 120px;
     -fx-min-height: 40px;
     -fx-font-size: 18px;
@@ -57,5 +55,6 @@ login-title{
 
 .login-btn:hover {
     -fx-background-color: #005280; /* Tonalità più scura al passaggio del mouse */
+    -fx-cursor: hand;
 }
 
