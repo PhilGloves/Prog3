@@ -22,7 +22,7 @@ public class Server implements Runnable {
 
   private Server() throws IllegalAccessException, IOException {
     String key = "Port";
-    int port = (int) FileHandler.getConfiguration().get(key);
+    int port = (int) FileHandler.getConfiguration().get(key); //legge dal file conf.json e imposta la porta
     this.server = new ServerSocket(port);
     this.users = FileHandler.getUsers();
   }

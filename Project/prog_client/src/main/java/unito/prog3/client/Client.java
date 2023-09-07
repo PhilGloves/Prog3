@@ -11,9 +11,9 @@ import java.net.Socket;
 import java.util.List;
 
 public final class Client {
-  private User user;
+  private User user; //
   private static String URL = "127.0.0.1";
-  private static int PORT = 1998;
+  private static int PORT = 1998;//presenti nel file conf.json lato server
 
   private Socket server;
   private ObjectInputStream input;
@@ -36,7 +36,6 @@ public final class Client {
     {
       INSTANCE = new Client();
     }
-
     return INSTANCE;
   }
 
@@ -159,9 +158,9 @@ public final class Client {
 
   public Connection login(User user) throws IOException, IllegalAccessException, ClassNotFoundException {
     System.out.println("login");
-    isNull(user);
+    isNull(user); //controlla che l'user non sia nullo altrimenti lancia un eccezione
     setUser(user);
-    output.writeObject(Connection.LOGIN);
+    output.writeObject(Connection.LOGIN); //scrive nel buffer della socket
     sendUser(user);
     return response();
   }

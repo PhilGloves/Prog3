@@ -30,8 +30,8 @@
 /* Left Section */
 .left-section-container {
     -fx-background-color: linear-gradient(to bottom right,
-    #f8dea7 0%,
-    rgba(188, 215, 255, 0.99) 100%);
+    #2d259c 0%,
+    rgba(255, 255, 255, 0.99) 100%);
 }
 .left-section-user{
     -fx-border-style: hidden hidden solid hidden;
@@ -157,7 +157,7 @@ mail-view-head{
 }
 
 .mail-container{
-    -fx-background-color: red;
+    -fx-background-color: #980b0b;
 
 }
 
@@ -255,6 +255,6 @@ mail-view-head{
 /* Error messages*/
 .error-message{
     -fx-font-weight: bold;
-    -fx-text-fill: red;
+    -fx-text-fill: #ad0000;
     -fx-font-family: Candara;
 }
