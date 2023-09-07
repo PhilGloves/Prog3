@@ -53,7 +53,7 @@ public class ControllerStart {
   }
 
   private boolean checkAccount(String username, String password) throws IOException, ClassNotFoundException, IllegalAccessException {
-    client = Client.getInstance();
+    client = Client.getInstance(); //controlla
     return client.login(new User(username,password))
                   .equals(Connection.OK);
   }
@@ -70,7 +70,7 @@ public class ControllerStart {
     Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
     Scene scene = new Scene(fxmlLoader.load(), 1210, 725);
     scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
-    stage.setTitle("ProgMail!");
+    stage.setTitle("ProgMail");
     stage.setScene(scene);
     stage.setResizable(false);
     ((ControllerMain)fxmlLoader.getController()).init(client, username.getText(), stage);
