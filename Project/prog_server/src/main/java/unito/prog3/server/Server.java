@@ -1,5 +1,5 @@
 package unito.prog3.server;
-
+//Le mie classi
 import unito.prog3.controller.Controller;
 import unito.prog3.file.FileHandler;
 import unito.prog3.models.Email;
@@ -308,8 +308,6 @@ public class Server implements Runnable {
         response(Connection.FAIL);
       }
     }
-
-
 
     private void login() throws IOException {
       System.out.println("login");
