@@ -15,6 +15,7 @@
     </properties>
 
     <dependencies>
+        <!-- Altre dipendenze -->
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
@@ -33,23 +34,11 @@
             <scope>compile</scope>
         </dependency>
 
-
-        <dependency>
-            <groupId>de.jensd</groupId>
-            <artifactId>fontawesomefx-materialdesignfont</artifactId>
-            <version>2.0.26-9.1.2</version>
-        </dependency>
-        <dependency>
-            <groupId>de.jensd</groupId>
-            <artifactId>fontawesomefx-commons</artifactId>
-            <version>9.1.2</version>
-        </dependency>
         <dependency>
             <groupId>de.jensd</groupId>
             <artifactId>fontawesomefx-fontawesome</artifactId>
-            <version>4.7.0-9.1.2</version>
+            <version>4.7.0-9.1.2</version> <!-- Utilizza questa versione compatibile di FontAwesomeFX -->
         </dependency>
-
 
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -97,7 +86,7 @@
                 <version>0.0.8</version>
                 <executions>
                     <execution>
-                        <!-- Default configuration for running with: mvn clean javafx:run -->
+                        <!-- Configurazione predefinita per l'esecuzione con: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>unito.prog3.proggrafica/unito.prog3.ClientApp</mainClass>

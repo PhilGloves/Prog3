@@ -22,8 +22,11 @@ public class ServerApp extends Application {
 
       scene = new Scene(fxmlLoader.load(), 500, 500);
       stage.setScene(scene);
+
       stage.show();
+      //Start thread
       Thread server = new Thread(new Server(fxmlLoader.getController()));
+
       server.setDaemon(true);
       server.start();
     } catch (IOException | IllegalAccessException e){

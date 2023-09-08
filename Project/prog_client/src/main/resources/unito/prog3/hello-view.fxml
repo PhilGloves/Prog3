@@ -13,54 +13,51 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane minHeight="200.0" minWidth="200.0" prefHeight="500.0" prefWidth="500.0" styleClass="login-view" stylesheets="@style/start.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unito.prog3.controller.ControllerStart">
-      <children>
-      <VBox alignment="CENTER" minHeight="250.0" minWidth="250.0" prefHeight="200.0" prefWidth="200.0" styleClass="login-card" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
-         <children>
-            
-                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="109.0" prefWidth="400.0" styleClass="login-title" text="ProgMail" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="NEVER">
-               <font>
-                  <Font name="Brush Script MT Italic" size="48.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="20.0" />
-               </VBox.margin>
-               <effect>
-                  <ColorAdjust brightness="1.0" />
-               </effect></Label>
-            <Label fx:id="errorMessage" alignment="CENTER" prefHeight="33.0" prefWidth="403.0" styleClass="login-error" textAlignment="CENTER" textFill="RED">
-               <font>
-                  <Font name="Calibri Bold Italic" size="12.0" />
-               </font>
-            </Label>
-            <TextField fx:id="username" prefHeight="30.0" prefWidth="360.0" promptText="Username@prog.com" styleClass="login-input">
-               <VBox.margin>
-                  <Insets left="20.0" right="20.0" top="10.0" />
-               </VBox.margin>
-            </TextField>
-            <PasswordField fx:id="password" prefHeight="30.0" prefWidth="85.0" promptText="Password" styleClass="login-input" VBox.vgrow="NEVER">
-               <VBox.margin>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
-               </VBox.margin>
-            </PasswordField>
-            <HBox alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="360.0">
-               <children>
-                      <Button contentDisplay="CENTER" minHeight="32.0" minWidth="64.0" onAction="#switchToMain" prefHeight="32.0" prefWidth="64.0" styleClass="login-btn" text="Login" textAlignment="CENTER">
-                     <font>
-                        <Font name="Bauhaus 93" size="17.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-               </children>
-               <VBox.margin>
-                  <Insets left="20.0" right="20.0" />
-               </VBox.margin>
-            </HBox>
-         </children>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-      </VBox>
-      </children>
-   </AnchorPane>
+    <children>
+        <VBox alignment="CENTER" minHeight="250.0" minWidth="250.0" prefHeight="200.0" prefWidth="200.0" styleClass="login-card" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="109.0" prefWidth="400.0" styleClass="login-title" text="Login" textAlignment="LEFT" VBox.vgrow="NEVER">
+                    <font>
+                        <Font name="Brush Script" size="48.0" />
+                    </font>
+                    <effect>
+                        <ColorAdjust brightness="1.0" />
+                    </effect>
+                </Label>
+                <Label fx:id="errorMessage" alignment="CENTER" prefHeight="33.0" prefWidth="403.0" styleClass="login-error" textAlignment="CENTER" textFill="RED">
+                    <font>
+                        <Font name="Calibri Bold Italic" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="username" prefHeight="30.0" prefWidth="360.0" promptText="Username" styleClass="login-input">
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="10.0" />
+                    </VBox.margin>
+                </TextField>
+                <PasswordField fx:id="password" prefHeight="30.0" prefWidth="85.0" promptText="Password" styleClass="login-input" VBox.vgrow="NEVER">
+                    <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+                    </VBox.margin>
+                </PasswordField>
+                <HBox alignment="CENTER" prefHeight="47.0" prefWidth="360.0">
+                    <children>
+                        <Button contentDisplay="CENTER" minHeight="32.0" minWidth="64.0" onAction="#switchToMain" prefHeight="32.0" prefWidth="64.0" styleClass="login-btn" text="Login" textAlignment="CENTER">
+                            <font>
+                                <Font name="Bauhaus 93" size="17.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </VBox>
+    </children>
+</AnchorPane>

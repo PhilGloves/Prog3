@@ -16,7 +16,7 @@ public class ClientApp extends Application {
     Scene scene = new Scene(fxmlLoader.load(), 500, 500);
     System.out.println(BootstrapFX.bootstrapFXStylesheet());
     scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
-    stage.setTitle("ProgMail");
+    stage.setTitle("E-Mail Service");
     stage.setScene(scene);
 
     stage.getIcons().add(new Image(

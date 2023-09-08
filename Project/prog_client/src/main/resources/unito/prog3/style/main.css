@@ -1,17 +1,13 @@
 /* main */
 .main {
-    -fx-background-color: linear-gradient(to bottom right,
-    rgba(255, 247, 242, 0.99) 0%,
-    rgba(242, 255, 255, 0.94) 100%);
+    -fx-background-color: linear-gradient(to bottom left, #00416a 0%, #C0C0C0 100%);
 }
 
 /*========================================================*/
 /* Head */
 .head {
     -fx-background-radius: 10;
-    -fx-background-color: linear-gradient(to bottom right,
-    rgba(242, 255, 255, 0.94) 0%,
-    rgba(255, 247, 242, 0.99) 100%);
+    -fx-background-color: linear-gradient(to bottom left, #C0C0C0 0%, #00416a 100%);
     -fx-padding: 0 10;
 }
 .head-text {
@@ -29,69 +25,130 @@
 /*========================================================*/
 /* Left Section */
 .left-section-container {
-    -fx-background-color: linear-gradient(to bottom right,
-    #f8dea7 0%,
-    rgba(188, 215, 255, 0.99) 100%);
+    -fx-background-color: linear-gradient(to bottom left, #00416a 0%, #C0C0C0 100%);
 }
-.left-section-user{
-    -fx-border-style: hidden hidden solid hidden;
-    -fx-border-color: #6c6c6c;
-    -fx-border-width: 1px;
-}
+
 .left-section-item {
-    -fx-background-color: linear-gradient(to bottom right,
-    rgba(23, 23, 23, 0.94) 0%,
-    rgba(47, 47, 47, 0.99) 100%);
-    -fx-background-radius: 30;
-    -fx-padding: 0 0 0 30;
+    -fx-background: #00416a;
     -fx-font-size: 1.6em;
     -fx-font-weight: bold;
     -fx-font-family: Candara;
-    -fx-effect: dropshadow(
-            one-pass-box,
-            rgba(0,0,0,0.8), 10, 0, 0, 0);
 }
-.left-section-item-text{
+.left-section-item-text {
     -fx-text-fill: #ebfafa;
 }
 .left-section-item:hover {
-    -fx-background-color: rgba(77, 77, 77, 0.99);
+    -fx-background-color: #C0C0C0;
 }
+
+/* Mail View Header */
+.mail-view-head {
+    -fx-background-color: #C0C0C0; /* Colore di sfondo grigio */
+    -fx-padding: 10px; /* Spaziatura interna */
+    -fx-font-size: 18px; /* Dimensione del testo */
+    -fx-font-weight: bold; /* Grassetto */
+    -fx-text-fill: #000000; /* Colore del testo nero */
+    -fx-background-radius: 10px; /* Bordi arrotondati */
+}
+
+
 
 /*========================================================*/
 /* mid Section */
 .mid-section {
     -fx-padding: 5;
-    -fx-border-style: hidden solid hidden hidden;
-    -fx-border-color: #E4E4E6;
-    -fx-background-color: linear-gradient(to bottom right,
-            rgba(52, 52, 52, 0.94) 0%,
-            rgba(63, 63, 63, 0.99) 100%);
-
 }
 .mid-section-title {
     -fx-font-size: 2.4em;
     -fx-font-weight: bold;
     -fx-font-family: Candara;
-    -fx-text-fill: #d2c2ae;
+    -fx-text-fill: #fff;
 }
 .mid-section-n {
     -fx-font-size: 1.3em;
     -fx-font-weight: bold;
-    -fx-text-fill: #ad9f8f;
-    -fx-font-family: Candara;
+    -fx-text-fill: #fff;
+    -fx-background: #00416a;
+
 }
 
+/* icons */
+.send-icon {
+    -fx-background-image: url('../icons/send.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 20px 20px; /* Imposta le dimensioni dell'immagine */
+    -fx-padding: 0 0 0 25px; /* Aggiungi spazio a sinistra dell'immagine per l'icona */
+}
+
+.sent-icon{
+    -fx-background-image: url('../icons/sent.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 20px 20px; /* Imposta le dimensioni dell'immagine */
+    -fx-padding: 0 0 0 25px; /* Aggiungi spazio a sinistra dell'immagine per l'icona */
+}
+
+.inbox-icon{
+    -fx-background-image: url('../icons/inbox.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 20px 20px; /* Imposta le dimensioni dell'immagine */
+    -fx-padding: 0 0 0 25px; /* Aggiungi spazio a sinistra dell'immagine per l'icona */
+}
+
+.pencil-icon {
+    -fx-background-image: url('../icons/pencil.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 20px 20px; /* Imposta le dimensioni dell'immagine */
+    -fx-padding: 0 0 0 25px; /* Aggiungi spazio a sinistra dell'immagine per l'icona */
+}
+
+.user-icon {
+    -fx-background-image: url('../icons/user.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 20px 20px; /* Imposta le dimensioni dell'immagine */
+    -fx-padding: 0 0 0 25px; /* Aggiungi spazio a sinistra dell'immagine per l'icona */
+}
+
+.forward-icon{
+    -fx-background-image: url('../icons/forward.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 20px 20px;
+    -fx-padding: 0 0 0 25px;
+}
+.reply-icon{
+    -fx-background-image: url('../icons/reply.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 20px 20px;
+    -fx-padding: 0 0 0 25px;
+}
+
+.replyall-icon{
+    -fx-background-image: url('../icons/replyall.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 20px 20px;
+    -fx-padding: 0 0 0 25px;
+}
+
+.delete-icon{
+    -fx-background-image: url('../icons/delete.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 20px 20px;
+    -fx-padding: 0 0 0 25px;
+}
 
 /*========================================================*/
 /* Mail List */
-.mail-list-box{
-    -fx-background: #f8f3ea;
-    -fx-border-color: #FFFFFF;
+
+
+.head-mail{
+    -fx-background-color: #00416a;;
+}
+.mail-list-box {
+    -fx-background: #C0C0C0;
+    -fx-border-color: #00416a;;
     -fx-background-insets: 0;
 }
 
- /*SOME EMAIL*/
+/*SOME EMAIL*/
 .item-mail {
     -fx-background-radius: 10;
     -fx-cursor: hand;
@@ -107,7 +164,7 @@
     -fx-spacing: 2;
     -fx-border-style: hidden hidden solid hidden;
     -fx-border-width: .5;
-    -fx-border-color: #b4b4b6;
+    -fx-border-color: #00416a;
     -fx-padding: 5;
 }
 .item-mail-from {
@@ -132,7 +189,7 @@
     -fx-text-alignment: justify;
 }
 
- /*EMPTY*/
+/*EMPTY*/
 .empty-mail-list-box {
     -fx-background: transparent;
 }
@@ -145,33 +202,31 @@
 /*========================================================*/
 /* EMAIL VIEW */
 
-/* mail-view-head */
-mail-view-head{
 
+.user-title{
+    -fx-font-size: 2.4em;
+    -fx-font-weight: bold;
+    -fx-font-family: Candara;
+    -fx-text-fill: #fff;
 }
 
 /* no mail selected */
 .no-mail-selected {
     -fx-font-size: 3em;
-    -fx-text-fill: #939da8;
+    -fx-text-fill: #C0C0C0;
 }
 
-.mail-container{
-    -fx-background-color: red;
-
+.mail-container {
+    -fx-background-color: #C0C0C0;
 }
 
 /* mail selected */
 .mail-card {
     -fx-background-radius: 5;
-    -fx-background-color:
-            linear-gradient(to bottom right,
-                rgba(52, 52, 52, 0.94) 0%,
-                rgba(63, 63, 63, 0.99) 100%);
+    -fx-background-color: #C0C0C0;
     -fx-padding: 10;
     -fx-font-size: 1.3em;
     -fx-spacing: 10;
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 5, 0, 0, 0);
 }
 .mail-card-head {
     -fx-border-style: hidden hidden solid hidden;
@@ -208,33 +263,31 @@ mail-view-head{
     -fx-font-family: Candara;
     -fx-text-fill: #a0a2a4;
 }
-.mail-card-subject{
+.mail-card-subject {
     -fx-font-family: Candara;
     -fx-font-weight: bold;
     -fx-text-fill: #F8F9FA;
-
 }
 
 .mail-card-body {
     -fx-padding: 0 20;
 }
-.mail-card-body-text{
+.mail-card-body-text {
     -fx-font-family: Candara;
     -fx-text-fill: #F8F9FA;
 }
 
-
 /*========================================================*/
 /* EMAIL VIEW */
 
-.new-mail-view{
+.new-mail-view {
     -fx-background-radius: 10;
     -fx-background-color: #ffffff;
     -fx-background-insets: 0;
     -fx-padding: 10;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 3, 0, 0, 0);
 }
-.new-mail-background{
+.new-mail-background {
     -fx-background-color: rgba(33, 37, 41, 0.7);
 }
 .new-mail-title {
@@ -249,12 +302,10 @@ mail-view-head{
     -fx-font-size: 1.2em;
 }
 
-
-
 /*=======================================================*/
 /* Error messages*/
-.error-message{
+.error-message {
     -fx-font-weight: bold;
-    -fx-text-fill: red;
+    -fx-text-fill: #ad0000;
     -fx-font-family: Candara;
 }
