@@ -40,9 +40,18 @@
 .left-section-item:hover {
     -fx-background-color: #C0C0C0;
 }
-.mail-view-head{
-    -fx-background-color: #C0C0C0;
+
+/* Mail View Header */
+.mail-view-head {
+    -fx-background-color: #C0C0C0; /* Colore di sfondo grigio */
+    -fx-padding: 10px; /* Spaziatura interna */
+    -fx-font-size: 18px; /* Dimensione del testo */
+    -fx-font-weight: bold; /* Grassetto */
+    -fx-text-fill: #000000; /* Colore del testo nero */
+    -fx-background-radius: 10px; /* Bordi arrotondati */
 }
+
+
 
 /*========================================================*/
 /* mid Section */
@@ -97,6 +106,26 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: 20px 20px; /* Imposta le dimensioni dell'immagine */
     -fx-padding: 0 0 0 25px; /* Aggiungi spazio a sinistra dell'immagine per l'icona */
+}
+
+.forward-icon{
+    -fx-background-image: url('../icons/forward.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 20px 20px;
+    -fx-padding: 0 0 0 25px;
+}
+.reply-icon{
+    -fx-background-image: url('../icons/reply.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 20px 20px;
+    -fx-padding: 0 0 0 25px;
+}
+
+.delete-icon{
+    -fx-background-image: url('../icons/delete.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 20px 20px;
+    -fx-padding: 0 0 0 25px;
 }
 
 /*========================================================*/

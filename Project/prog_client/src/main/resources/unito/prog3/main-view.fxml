@@ -26,9 +26,10 @@
                             <children>
                                 <HBox fx:id="mail_head" alignment="CENTER_RIGHT" prefHeight="106.0" prefWidth="710.0" spacing="10.0" styleClass="mail-view-head" visible="false">
                                     <children>
-                                        <Label style="-fx-font-size: 20;" styleClass="reply-icon" text="Reply" />
-                                        <Label style="-fx-font-size: 20;" styleClass="forward-icon" text="Forward" />
-                                        <Label style="-fx-font-size: 30; -fx-text-fill: #e14343;" styleClass="delete-icon" text="Delete" />
+                                        <Label fx:id="replyALLBtn" style="-fx-font-size: 20;" styleClass="reply-icon" onMouseClicked="#replyAllActual"  />
+                                        <Label fx:id="replyBtn" style="-fx-font-size: 20;" styleClass="reply-icon" onMouseClicked="#replyActual"  />
+                                        <Label fx:id="forwardBtn"  style="-fx-font-size: 20;" styleClass="forward-icon" onMouseClicked="#forwardActual" />
+                                        <Label fx:id="deleteButton" style="-fx-font-size: 30; -fx-text-fill: #e14343;" styleClass="delete-icon" onMouseClicked="#deleteActual"/>
                                     </children>
                                     <padding>
                                         <Insets right="20.0" />
