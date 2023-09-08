@@ -26,10 +26,10 @@
                             <children>
                                 <HBox fx:id="mail_head" alignment="CENTER_RIGHT" prefHeight="106.0" prefWidth="710.0" spacing="10.0" styleClass="mail-view-head" visible="false">
                                     <children>
-                                        <Label fx:id="replyALLBtn" style="-fx-font-size: 20;" styleClass="reply-icon" onMouseClicked="#replyAllActual"  />
-                                        <Label fx:id="replyBtn" style="-fx-font-size: 20;" styleClass="reply-icon" onMouseClicked="#replyActual"  />
-                                        <Label fx:id="forwardBtn"  style="-fx-font-size: 20;" styleClass="forward-icon" onMouseClicked="#forwardActual" />
-                                        <Label fx:id="deleteButton" style="-fx-font-size: 30; -fx-text-fill: #e14343;" styleClass="delete-icon" onMouseClicked="#deleteActual"/>
+                                        <Label fx:id="replyALLBtn" onMouseClicked="#replyAllActual" style="-fx-font-size: 20;" styleClass="replyall-icon" />
+                                        <Label fx:id="replyBtn" onMouseClicked="#replyActual" style="-fx-font-size: 20;" styleClass="reply-icon" />
+                                        <Label fx:id="forwardBtn" onMouseClicked="#forwardActual" style="-fx-font-size: 20;" styleClass="forward-icon" />
+                                        <Label fx:id="deleteButton" onMouseClicked="#deleteActual" style="-fx-font-size: 30; -fx-text-fill: #e14343;" styleClass="delete-icon" />
                                     </children>
                                     <padding>
                                         <Insets right="20.0" />
@@ -63,7 +63,7 @@
                         <VBox maxWidth="261.0" prefHeight="655.0" prefWidth="248.0" spacing="5.0" styleClass="mid-section" BorderPane.alignment="CENTER">
                             <children>
                                 <AnchorPane prefHeight="0.0" prefWidth="238.0" styleClass="head-mail">
-                                    <children >
+                                    <children>
                                         <Label fx:id="selected_box" layoutX="10.0" layoutY="35.0" styleClass="mid-section-title" text="INBOX" AnchorPane.bottomAnchor="10.0" />
                                         <Label fx:id="box_size" layoutX="100.0" layoutY="50.0" styleClass="mid-section-n" text="numero" AnchorPane.rightAnchor="0.0">
                                             <padding>
@@ -201,7 +201,7 @@
                                             <children>
                                                 <Label fx:id="errorMsg" layoutY="10.0" prefHeight="24.0" prefWidth="279.0" styleClass="error-message" AnchorPane.leftAnchor="0.0" />
                                                 <Label fx:id="title_new" layoutX="200.0" layoutY="10.0" prefHeight="24.0" prefWidth="139.0" styleClass="new-mail-title" text="NEW MAIL" AnchorPane.leftAnchor="300.0" />
-                                                <Label style="-fx-font-size: 20;" onMouseClicked="#sendMail" styleClass="send-icon" AnchorPane.rightAnchor="0.0">
+                                                <Label onMouseClicked="#sendMail" style="-fx-font-size: 20;" styleClass="send-icon" AnchorPane.rightAnchor="0.0">
                                                     <cursor>
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
