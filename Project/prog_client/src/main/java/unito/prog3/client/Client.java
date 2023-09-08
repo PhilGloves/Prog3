@@ -127,6 +127,7 @@ public final class Client {
   public Connection send(Email email) throws IOException, ClassNotFoundException {
     System.out.println("send");
     email.setFrom(user.getUsername());
+    //Stream
     output.writeObject(Connection.SEND);
     output.writeObject(email);
     return response();

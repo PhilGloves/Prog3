@@ -20,9 +20,12 @@ public class Server implements Runnable {
   private List<User> users;
   private Controller controller;
 
+  // Costruttori
+
   private Server() throws IllegalAccessException, IOException {
     String key = "Port";
     int port = (int) FileHandler.getConfiguration().get(key); //legge dal file conf.json e imposta la porta
+    //Istanzo socket
     this.server = new ServerSocket(port);
     this.users = FileHandler.getUsers();
   }
@@ -56,9 +59,8 @@ public class Server implements Runnable {
   @Override
   public void run() {
     Thread.currentThread().setName("Sever");
-    writeLog("Server UP!!");
+    writeLog("Server Online");
     while (true){
-
       try {
         Socket client = server.accept();
         new Thread(new ClientHandle(client)).start();
@@ -71,6 +73,7 @@ public class Server implements Runnable {
 
   /*==========================================================*/
   /* Client Handling */
+  //Inizializzazione dei vari client
   class ClientHandle implements Runnable {
     private boolean connected = true;
 

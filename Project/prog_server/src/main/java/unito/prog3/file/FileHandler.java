@@ -44,6 +44,8 @@ public class FileHandler {
     return new File(fileName);
   }
 
+
+  //Simple method no thread
   private static List<Email> readEmails(File file) {
     List<Email> emails;
     ObjectMapper mapper = new ObjectMapper();
@@ -110,9 +112,6 @@ public class FileHandler {
   }
 
   /* Public Method */
-
-
-  // Nuovo utente genero la sua cartella e i suoi file
 
   public static List<Email> getMailByBox(String username,
                                          String box) throws IllegalAccessException {
@@ -234,6 +233,7 @@ public class FileHandler {
     Map<String, Object> conf;
     String key = "ID";
     int actual;
+
     synchronized (FILE_LOCKS.computeIfAbsent(
             json, k-> new ReentrantLock()
     )){
