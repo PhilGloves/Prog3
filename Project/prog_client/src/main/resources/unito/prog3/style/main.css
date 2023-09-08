@@ -69,7 +69,7 @@
     -fx-font-weight: bold;
     -fx-text-fill: #fff;
     -fx-background: #00416a;
-    -fx-font-family: Candara;
+
 }
 
 /* icons */
@@ -130,6 +130,11 @@
 
 /*========================================================*/
 /* Mail List */
+
+
+.head-mail{
+    -fx-background-color: #00416a;;
+}
 .mail-list-box {
     -fx-background: #C0C0C0;
     -fx-border-color: #00416a;;
@@ -211,11 +216,10 @@
 /* mail selected */
 .mail-card {
     -fx-background-radius: 5;
-    -fx-background-color: linear-gradient(to bottom left, rgba(52, 52, 52, 0.94) 0%, rgba(63, 63, 63, 0.99) 100%);
+    -fx-background-color: #C0C0C0;
     -fx-padding: 10;
     -fx-font-size: 1.3em;
     -fx-spacing: 10;
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 5, 0, 0, 0);
 }
 .mail-card-head {
     -fx-border-style: hidden hidden solid hidden;
