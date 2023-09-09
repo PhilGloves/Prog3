@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainView" prefHeight="725.0" prefWidth="1200.0" styleClass="main" stylesheets="@style/main.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unito.prog3.controller.ControllerMain">
+    <children>
+        <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <left>
+                <StackPane prefHeight="655.0" prefWidth="0.0" styleClass="left-section-container" BorderPane.alignment="CENTER" />
+            </left>
+            <center>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <center>
+                        <VBox prefHeight="655.0" prefWidth="923.0" styleClass="mid-section" BorderPane.alignment="CENTER">
+                            <children>
+                                <HBox fx:id="mail_head" alignment="CENTER_RIGHT" prefHeight="106.0" prefWidth="710.0" spacing="10.0" styleClass="mail-view-head" visible="false">
+                                    <children>
+                                        <Label fx:id="replyALLBtn" onMouseClicked="#replyAllActual" style="-fx-font-size: 20;" styleClass="replyall-icon" />
+                                        <Label fx:id="replyBtn" onMouseClicked="#replyActual" style="-fx-font-size: 20;" styleClass="reply-icon" />
+                                        <Label fx:id="forwardBtn" onMouseClicked="#forwardActual" style="-fx-font-size: 20;" styleClass="forward-icon" />
+                                        <Label fx:id="deleteButton" onMouseClicked="#deleteActual" style="-fx-font-size: 30; -fx-text-fill: #e14343;" styleClass="delete-icon" />
+                                    </children>
+                                    <padding>
+                                        <Insets right="20.0" />
+                                    </padding>
+                                </HBox>
+                                <AnchorPane fx:id="mail_container" prefHeight="575.0" prefWidth="960.0">
+                                    <children>
+                                        <VBox fx:id="none_mail" alignment="CENTER" opacity="0.5" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <Label styleClass="no-mail-selected" text="No Selected Mail" />
+                                            </children>
+                                        </VBox>
+                                        <ScrollPane fx:id="mails_wrapper" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <content>
+                                                <VBox fx:id="mails_inner_wrapper" prefWidth="722.0" spacing="10.0">
+                                                    <padding>
+                                                        <Insets left="5.0" top="10.0" />
+                                                    </padding>
+                                                </VBox>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                </AnchorPane>
+                            </children>
+                        </VBox>
+                    </center>
+                    <left>
+                        <VBox maxWidth="261.0" prefHeight="655.0" prefWidth="248.0" spacing="5.0" styleClass="mid-section" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane prefHeight="0.0" prefWidth="238.0" styleClass="head-mail">
+                                    <children>
+                                        <Label fx:id="selected_box" layoutX="10.0" layoutY="35.0" styleClass="mid-section-title" text="INBOX" AnchorPane.bottomAnchor="10.0" />
+                                        <Label fx:id="box_size" layoutX="100.0" layoutY="50.0" styleClass="mid-section-n" text="numero" AnchorPane.rightAnchor="0.0">
+                                            <padding>
+                                                <Insets right="20.0" />
+                                            </padding>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="623.0" prefWidth="250.0">
+                                    <children>
+                                        <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" styleClass="mail-list-box" vbarPolicy="NEVER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                                            <content>
+                                                <VBox fx:id="mail_list" prefHeight="550.0" prefWidth="230.0">
+                                                    <children>
+                                                        <StackPane prefHeight="597.0" prefWidth="248.0" visible="false">
+                                                            <children>
+                                                                <Label text="EMPTY LIST" />
+                                                            </children>
+                                                        </StackPane>
+                                                    </children>
+                                                </VBox>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </VBox>
+                    </left>
+                </BorderPane>
+            </center>
+         <top>
+            <StackPane maxHeight="70.0" prefHeight="180.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+               <children>
+                        <AnchorPane maxHeight="275.0" prefHeight="166.0" prefWidth="1200.0">
+                            <children>
+                        <HBox prefHeight="54.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                                        <HBox fx:id="box_new" alignment="CENTER_LEFT" onMouseClicked="#showViewNewMail" prefHeight="50.0" prefWidth="200.0" spacing="10.0" styleClass="left-section-item">
+                                            <children>
+                                                <Label prefHeight="16.0" prefWidth="25.0" styleClass="pencil-icon">
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <Label styleClass="left-section-item-text" text="New" />
+                                            </children>
+                                            <padding>
+                                                <Insets left="20.0" />
+                                            </padding>
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                        </HBox>
+                                        <HBox fx:id="box_sent" alignment="CENTER_LEFT" onMouseClicked="#boxClicked" prefHeight="50.0" prefWidth="200.0" spacing="10.0" styleClass="left-section-item">
+                                            <children>
+                                                <Label prefHeight="19.0" prefWidth="25.0" styleClass="sent-icon">
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <Label styleClass="left-section-item-text" text="Sent" />
+                                            </children>
+                                            <padding>
+                                                <Insets left="20.0" />
+                                            </padding>
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                        </HBox>
+                                      <HBox fx:id="error_box" prefHeight="70.0" prefWidth="259.0" spacing="10.0" visible="false">
+                                          <children>
+                                              <Label prefHeight="17.0" prefWidth="12.0" style="-fx-text-fill: red;" styleClass="error-message" text="!">
+                                                  <HBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                  </HBox.margin>
+                                              </Label>
+                                              <Label fx:id="error_text" prefHeight="34.0" prefWidth="120.0" styleClass="error-message" text="Label" />
+                                          </children>
+                                          <padding>
+                                              <Insets left="10.0" top="10.0" />
+                                          </padding>
+                                      </HBox>
+                                      <HBox alignment="CENTER_LEFT" maxHeight="85.0" prefHeight="85.0" prefWidth="320.0" styleClass="left-section-user">
+                                          <children>
+                                              <Label prefHeight="22.0" prefWidth="30.0" styleClass="user-icon">
+                                              </Label>
+                                              <Label fx:id="username" prefHeight="38.0" prefWidth="261.0" styleClass="user-title" text="email@email.com">
+                                                  <font>
+                                                      <Font name="Candara" size="15.0" />
+                                                  </font>
+                                              </Label>
+                                          </children>
+                                      </HBox>
+                                        <HBox fx:id="box_in" alignment="CENTER_LEFT" onMouseClicked="#boxClicked" prefHeight="70.0" prefWidth="174.0" spacing="10.0" styleClass="left-section-item">
+                                            <children>
+                                                <Label prefHeight="17.0" prefWidth="25.0" styleClass="inbox-icon">
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <Label prefHeight="25.0" prefWidth="99.0" styleClass="left-section-item-text" text="Inbox" />
+                                            </children>
+                                            <padding>
+                                                <Insets left="20.0" />
+                                            </padding>
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                        </HBox>
+                           </children>
+                        </HBox>
+                            </children>
+                        </AnchorPane>
+               </children>
+            </StackPane>
+         </top>
+        </BorderPane>
+        <AnchorPane fx:id="viewNewMail" opacity="0.0" prefHeight="200.0" prefWidth="200.0" scaleZ="2.0" styleClass="new-mail-background" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" styleClass="new-mail-background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <VBox fx:id="newWrapper" maxHeight="720.0" prefHeight="645.0" prefWidth="731.0" spacing="5.0" styleClass="new-mail-view">
+                            <children>
+                                <VBox prefHeight="65.0" prefWidth="533.0">
+                                    <VBox.margin>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <Label fx:id="backButton" onMouseClicked="#hideViewNew" style="-fx-font-size: 20;" styleClass="back-icon" text="&lt;">
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                        </Label>
+                                        <AnchorPane prefHeight="46.0" prefWidth="671.0">
+                                            <children>
+                                                <Label fx:id="errorMsg" layoutY="10.0" prefHeight="24.0" prefWidth="279.0" styleClass="error-message" AnchorPane.leftAnchor="0.0" />
+                                                <Label fx:id="title_new" layoutX="200.0" layoutY="10.0" prefHeight="24.0" prefWidth="139.0" styleClass="new-mail-title" text="NEW MAIL" AnchorPane.leftAnchor="300.0" />
+                                                <Label onMouseClicked="#sendMail" style="-fx-font-size: 20;" styleClass="send-icon" AnchorPane.rightAnchor="0.0">
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                </Label>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="130.0" prefWidth="709.0">
+                                    <VBox.margin>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <Label prefHeight="36.0" prefWidth="35.0" styleClass="new-mail-label" text="To:">
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" top="10.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="toField" prefHeight="43.0" prefWidth="602.0">
+                                                    <HBox.margin>
+                                                        <Insets top="10.0" />
+                                                    </HBox.margin>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <Label prefHeight="29.0" prefWidth="58.0" styleClass="new-mail-label" text="Object:" />
+                                                <TextField fx:id="sobjectField" prefHeight="43.0" prefWidth="602.0" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <AnchorPane prefHeight="342.0" prefWidth="698.0">
+                                    <children>
+                                        <TextArea fx:id="bodyField" prefHeight="327.0" prefWidth="671.0" promptText="Your text.." style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 3, 0, 0, 0);" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <font>
+                                                <Font name="Candara" size="12.0" />
+                                            </font>
+                                        </TextArea>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </VBox.margin>
+                                </AnchorPane>
+                            </children>
+                            <HBox.margin>
+                                <Insets bottom="5.0" right="10.0" top="75.0" />
+                            </HBox.margin>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

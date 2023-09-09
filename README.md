@@ -75,7 +75,24 @@ L'interfaccia utente deve essere:
 - Cancellare tutte le cartelle degli utenti presenti (che contengono ognuno i file `inbox` e `sent`) e le rimpiazzo con i nuovi utenti creati.
 - Provo ad aprire e se funziona mando qualche mail in giro.
 
-### Altri Cambiamenti
+### Aggiunta commenti in `prog_client/`
 
+
+### Altri Cambiamenti
+- (PHIL) DOPO PRANZO aggiungere un sacco di mail fittizzie e reply e provare che funzioni tutto (soprattutto cancellare mail in mezzo a 3-4 risposte)
+- Da cancellare (forse) metodi a righe 79 e 90 e 248 (registrazione che faceva da terminale Bad) del FileHandler.Java<prog_server
+- Da cancellare in prog_server la cartella client (e provare se comunque funziona)
+- Da cambiare icone in resources>icons e "server-view.fxml"
 - Dovrei cambiare anche il `conf.json` con ip e porte diverse?
 - Tolgo qualche metodo che non è stato utilizzato o non è necessario per il progetto, come i metodi per la registrazione che non sono stati utilizzati in un po' di classi (da fare).
+
+-Rimossa cartella progGrafica da prog_client\src\main\resources\unito\prog3
+
+### Progetto descritto dalla prof nella lezione 8.GUI da 1:16 in poi
+Vanno bene anche solo i messaggi in entrata
+Vorrebbe che non sia un server pop (i messaggi li teniamo anche sul server)
+Il server non ha cache se no esploderebbe e legge direttamente dai file di ciascun utente
+Client con MVC
+
+LA PROF DICE (minuto 20:30 lezione 12.1) che il metodo synchronized succede che si dichiara che il corpo di questo metodo è una sezione critica e quindi l'oggetto che creiamo eseguirà solo uno alla volta il metodo. Non potrà MAI avere più record di attivazione del metodo contemporaneamente (si autogestisce il semaforo).
+

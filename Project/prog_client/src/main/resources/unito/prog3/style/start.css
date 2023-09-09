@@ -1,0 +1,60 @@
+/* Login */
+
+
+.login-view {
+    -fx-background-color: linear-gradient(to bottom left, rgb(100, 150, 200) 0%, rgb(50, 100, 150) 100%);
+    -fx-background-image: url('../icons/email-icon.png');
+    -fx-background-position: top left;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 200px auto; /* Imposta la larghezza a 100px e la larghezza automatica */
+    -fx-padding: 20px;
+}
+
+
+.login-card {
+    -fx-background-radius: 18px;
+    -fx-background-color: #C0C0C0;
+    /*-fx-padding: 20px;*/
+    -fx-max-width: 400px;
+    -fx-translate-x: 50px;
+    -fx-translate-y: 50px;
+}
+
+
+login-title{
+    -fx-font-family: "Arial";
+    -fx-text-fill: #00416a; /* Nero */
+    -fx-font-size: 24px;
+}
+
+
+.login-error {
+    -fx-font-family: "Verdana";
+    -fx-text-fill: #FF5722; /* Arancione scuro */
+    -fx-font-size: 14px;
+}
+
+.login-input {
+    -fx-prompt-text-fill: #999999; /* Grigio medio */
+    -fx-font-size: 16px;
+    -fx-background-color: #f5f5f5; /* Grigio chiaro */
+    -fx-background-radius: 18px;
+    -fx-padding: 6px;
+}
+
+.login-btn {
+    -fx-background-color: #00416a;
+    -fx-text-fill: #fff;
+    -fx-min-width: 120px;
+    -fx-min-height: 40px;
+    -fx-font-size: 18px;
+    -fx-background-radius: 20px;
+    -fx-border: none;
+    -fx-cursor: pointer;
+}
+
+.login-btn:hover {
+    -fx-background-color: #005280; /* Tonalità più scura al passaggio del mouse */
+    -fx-cursor: hand;
+}
+
